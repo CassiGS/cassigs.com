@@ -18,7 +18,7 @@ body {
   background-image:
     linear-gradient(to right, rgba(54, 97, 201, .3) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(54, 97, 201, .3), transparent 1px);
-  padding: var(--grid-size);
+  padding: calc(var(--grid-size) * 2);
   color: var(--primary-color);
   font-family: "DM Mono", monospace;
   font-weight: 400;
@@ -45,4 +45,21 @@ p {
   padding: 40px;
   width: 100%;
   max-width: 600px;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+.social-icons {
+  display: flex;
+  gap: 50px;
+  margin-top: 60px;
+}
+
+.social-icons i {
+  padding: 0;
+  margin: 0;
+  width: 0;
+  font-size: 40px;
 }
