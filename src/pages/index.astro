@@ -1,18 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "About Me";
+const pageTitle = "CassiGS Dev and Design";
 
-const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 ---
 
-<BaseLayout pageTitle="CassiGS Dev and Design">
+<BaseLayout pageTitle={pageTitle}>
 <div class="content-box">
   <h1>Hi, I'm Cassi</h1>
   <p>I’m a front-end developer, designer, and all around too-many-hobbiest based in Bellingham, WA.</p>
