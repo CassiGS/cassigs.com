@@ -1,0 +1,32 @@
+.blog-link {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid blue;
+
+    @media (min-width: 1250px) {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    
+}
+
+.blog-listing__title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+   
+
+    @media (min-width: 1250px) {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+
+.blog-listing__tags {
+    display: flex;
+    gap: 10px;
+
+}
