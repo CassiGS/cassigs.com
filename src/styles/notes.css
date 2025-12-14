@@ -9,6 +9,8 @@
     @media (min-width: 1250px) {
         justify-content: space-between;
         flex-direction: row;
+        align-items: center;
+
     }
     
 }
@@ -16,7 +18,7 @@
 .blog-listing__title {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
    
 
     @media (min-width: 1250px) {
@@ -25,8 +27,19 @@
     }
 }
 
+.blog-listing__title a {
+    @media (min-width: 1250px) {
+         align-self: center;
+    }
+}
+
 .blog-listing__tags {
     display: flex;
     gap: 10px;
+}
 
+.blog-listing__tag {
+    background-color: blue;
+    padding: 5px 10px;
+    color: white;
 }
