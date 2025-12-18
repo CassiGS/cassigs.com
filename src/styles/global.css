@@ -71,9 +71,19 @@ footer p {
 }
 
 .header-wrapper {
-  display: flex;
-  gap: calc(var(--grid-size) * 2);
+    @media (min-width: 900px) {
+      display: flex;
+      gap: calc(var(--grid-size) * 2);
+    }
 
+}
+
+nav {
+  @media (min-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 header {
