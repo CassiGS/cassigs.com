@@ -1,11 +1,42 @@
 ---
-import Navigation from "./Navigation.astro";
-import Menu from "./Menu.astro"
+import Container from "@components/Container.astro";
+import Link from "@components/Link.astro";
+import DownloadResume from "@components/DownloadResume.astro";
+import { SITE } from "@consts";
 ---
 
 <header>
-    <nav>
-        <a href="/about">About</a>
-        <a href="/notes">Dev Notes</a>
-    </nav>
+  <Container>
+    <div class="flex flex-wrap gap-y-2 justify-between items-center">
+      <Link href="/" underline={false}>
+        <div class="font-semibold">
+          {SITE.NAME}
+        </div>
+      </Link>
+      <nav class="flex gap-2 items-center">
+        <Link href="#about-section">
+          about
+        </Link>
+        <span>
+          {`/`}
+        </span>
+        <Link href="#expirience-section">
+          experience
+        </Link>
+        <span>
+          {`/`}
+        </span>
+                <Link href="#education-section">
+          education
+        </Link>
+        <span>
+          {`/`}
+        </span>
+        <Link href="#tech-section">
+          tech
+        </Link>
+        <DownloadResume />
+      </nav>
+    </div>
+  </Container>
 </header>

@@ -1,129 +1,107 @@
-*, *::before, *::after {
-  box-sizing: border-box;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  overflow-y: scroll;
+  color-scheme: light;
+  scroll-behavior: smooth;
 }
 
-* {
-  margin: 0;
+html.dark {
+  color-scheme: dark;
 }
 
-:root {
-  /* colors */
-  --primary-color: #3661c9;
-
-  --grid-size: 30px;
+html,
+body {
+  @apply size-full;
 }
 
 body {
-  background-size: var(--grid-size) var(--grid-size);
-  background-image:
-    linear-gradient(to right, rgba(54, 97, 201, .3) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(54, 97, 201, .3), transparent 1px);
-  padding: calc(var(--grid-size) * 2);
-  color: var(--primary-color);
-  font-family: "DM Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.5;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin: 0
-}
-
-h1 {
-  font-family: "DM Mono", monospace;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 55px;
-  color: var(--primary-color);
-  margin-bottom: 10px;
-}
-
-p {
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-
-main {
-  flex: 1;
-}
-
-
-footer {
-  min-height: 50px;
-  width: fit-content;
-  align-self: end;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  color: #fff;
-  background-color: var(--primary-color);
-
-}
-
-footer a {
-    color: #fff;
-}
-
-footer p {
-  margin-bottom: 0;
-}
-
-.header-wrapper {
-    @media (min-width: 900px) {
-      display: flex;
-      gap: calc(var(--grid-size) * 2);
-    }
-
-}
-
-nav {
-  @media (min-width: 900px) {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+  @apply font-sans antialiased;
+  @apply flex flex-col;
+  @apply bg-stone-50 dark:bg-stone-900;
+  @apply text-black/50 dark:text-white/75;
 }
 
 header {
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  color: #fff;
-  background-color: var(--primary-color);
-  height: fit-content;
-
+  @apply fixed top-0 left-0 right-0 z-50 py-5;
+  @apply bg-stone-100/75 dark:bg-stone-900/25;
+  @apply backdrop-blur-sm saturate-200;
 }
 
-header a {
-    color: #fff;
+h1,
+h2, 
+h3 {
+  @apply font-mono font-semibold text-stone-900 dark:text-stone-50;
 }
 
-
-.content-box {
-  background-color: #fff;
-  padding: 40px;
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 20px;
+main {
+  @apply flex-1 py-32;
 }
 
-a {
-    color: var(--primary-color);
+footer {
+  @apply py-5 text-sm;
 }
 
-.social-icons {
-  display: flex;
-  gap: 50px;
-  margin-top: 60px;
+article {
+  @apply max-w-full prose dark:prose-invert prose-img:mx-auto prose-img:my-auto;
+  @apply prose-headings:font-semibold prose-p:font-sans;
+  @apply prose-headings:text-stone-100 prose-headings:dark:text-stone-50;
 }
 
-.social-icons i {
-  padding: 0;
-  margin: 0;
-  width: 0;
-  font-size: 40px;
+section {
+  z-index: 2;
+  position: relative;
+}
+
+button {
+  @apply font-mono font-semibold;
+  @apply relative w-fit flex py-1.5 flex-nowrap rounded;
+  @apply border border-indigo-600/100 dark:border-rose-500;
+  @apply bg-indigo-600 hover:bg-stone-50 dark:bg-rose-500 dark:hover:bg-stone-900;
+  @apply text-stone-50 hover:text-indigo-600 dark:text-stone-900 dark:hover:text-stone-50;
+  @apply transition-all;
+}
+
+:target:before {
+    content: "";
+    display: block;
+    height: 75px;
+    margin: -75px 0 0;
+    position: relative;
+    z-index:-1;
+}
+
+nav a {
+  @apply text-sm;
+}
+
+@layer utilities {
+  article a {
+    @apply font-sans text-current underline underline-offset-2;
+    @apply decoration-black/15 dark:decoration-white/30;
+    @apply transition-colors duration-300 ease-in-out;
+  }
+  article a:hover {
+    @apply text-black dark:text-stone-50;
+    @apply decoration-black/25 dark:decoration-white/50;
+  }
+}
+
+.animate {
+  @apply opacity-0 translate-y-3;
+  @apply transition-all duration-700 ease-out;
+}
+
+.animate.show {
+  @apply opacity-100 translate-y-0;
+}
+
+html #back-to-top {
+  @apply opacity-0 pointer-events-none;
+}
+
+html.scrolled #back-to-top {
+  @apply opacity-100 pointer-events-auto;
 }

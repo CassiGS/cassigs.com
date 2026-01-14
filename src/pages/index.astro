@@ -1,24 +1,246 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "CassiGS Dev and Design";
+import { getCollection } from "astro:content";
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import Link from "@components/Link.astro";
+import Tag from '@components/Tag.astro'
+import { dateRange } from "@lib/utils";
+import { SITE, HOME, SOCIALS, CODE_STACK, CMS_STACK, DESIGN_STACK, GENERAL_STACK } from "@consts";
 
+// const blog = (await getCollection("blog"))
+//   .filter(post => !post.data.draft)
+//   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+//   .slice(0,SITE.NUM_POSTS_ON_HOMEPAGE);
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+// const projects = (await getCollection("projects"))
+//   .filter(project => !project.data.draft)
+//   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+//   .slice(0,SITE.NUM_PROJECTS_ON_HOMEPAGE);
+
+// const education = (await getCollection("education"))
+//   .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
+  
+const allwork = (await getCollection("work"))
+  .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
+  .slice(0,SITE.NUM_WORKS_ON_HOMEPAGE);
+
+const work = await Promise.all(
+  allwork.map(async (item) => {
+    const { Content } = await item.render();
+    return { ...item, Content };
+  })
+);
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-<div class="content-box">
-  <h1>Hi, I'm Cassi</h1>
-  <p>I’m a front-end developer, designer, and all around too-many-hobbiest based in Bellingham, WA.</p>
-  <p>I build approachable digital experiences and enjoy exploring the space where code, design systems, and creativity overlap. Which is to say, I have a soft spot for CSS.</p>
+<PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
+  <Container>
+    <h1 class="animate">
+      Hi, I'm Cassi!
+    </h1>
+    <div class="space-y-16">
+      <section>
+        <article class="space-y-4">
+          <p class="animate">
+            I'm a design-forward Frontend Developer specializing in building web, marketing, and UX experiences. 
+          </p>
+        </article>
+        <ul class="flex flex-wrap gap-2">
+          {SOCIALS.map(SOCIAL => (
+            <li class="flex gap-x-2 text-nowrap">
+              <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
+                {SOCIAL.NAME}
+              </Link>
+              {"/"}
+            </li>
+          ))}
+          <li class="line-clamp-1">
+            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`}>
+              {SITE.EMAIL}
+            </Link>
+          </li>
+        </ul>
+      </section>
+      <section class="animate space-y-6" id="about-section">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h2>
+            About
+          </h2>
+          <article class="space-y-4">
+          <p class="animate">
+           I've worn many hats in my career. From design work, to customer service, to marketing teams - I'm a frontend developer that understands the needs to a variety of team members. 
+          </p>
+          <p class="animate">
+          Need great UX and UI experiences? I bring a strong design sensibility to Frontend development, which means seamless collaboration with designers and faithful translation of wireframes into polished, production-ready interfaces. I enjoy working within and building design systems that keep code scalable, consistent, and easy to reuse.
+          </p>
+          <p class="animate">
+            Working on a marketing team? I’ve spent 5+ years on the technical side of marketing, so I understand the importance of performance, SEO, information architecture, and effective landing page layouts. I’m comfortable collaborating cross-functionally and bridging the gap between technical and non-technical teammates.
+          </p>
+          <p class="animate">I’m also editor-friendly. With a strong background in CMS platforms, I design with the end user in mind—whether that’s a content marketer publishing a blog post or a demand gen specialist building a landing page. I create flexible, intuitive editor experiences that help teams move quickly and confidently.
+</p>
+        </article>
+      </section>
+      <!-- <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Latest posts
+          </h5>
+          <Link href="/blog">
+            See all posts
+          </Link>
+        </div>
+        <ul class="flex flex-col gap-4">
+          {blog.map(post => (
+            <li>
+              <ArrowCard entry={post} />
+            </li>
+          ))}
+        </ul>
+      </section> -->
+
+      <section class="animate space-y-6" id="expirience-section">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h2>
+            Relevant Experience
+          </h2>
+          <Link external href="https://www.linkedin.com/in/cassigs/">
+            See all work
+          </Link>
+        </div>
+        <ul class="flex flex-col space-y-4">
+          {work.map(entry => (
+            <li>
+      
+              <div class="font-bold font-mono text-indigo-600 dark:text-rose-500 mb-.75">
+                {entry.data.company}
+              </div>
+              <div class="text-sm font-mono text-indigo-400 dark:text-rose-200 mb-3">
+                {entry.data.role} / {dateRange(entry.data.dateStart, entry.data.dateEnd)}
+              </div>
+              <div class="flex gap-2">
+                {entry.data.technologies.map(tag => <Tag tag={tag} />)}
+              </div>
+              <article>
+                <entry.Content />
+              </article>
+
+            </li>
+          ))}
+        </ul>
+      </section>
+
+            <section class="animate space-y-6" id="education-section">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h2>
+            Education
+          </h2>
     
-  <p>Outside of code I explore a few creative detours like fiber arts and illustration over in my studio.</p>
+        </div>
+        <ul class="flex flex-col space-y-4">
+                      <li>
+      
+              <div class="font-bold font-mono text-indigo-600 dark:text-rose-500 mb-.75">
+                Western Washington University
+              </div>
+              <div class="text-sm font-mono text-indigo-400 dark:text-rose-200 mb-3">
+                B.A. Visual Journalism / 2006 - 2010
+              </div>
+   
+              <article>Studied visual storytelling, digital media, and web content creation. Worked as Online Editor for Western Front and Klipsun Magazine, gaining experience in digital publishing, design, and content management.</article>
+            </li>
+                            <li>
+      
+              <div class="font-bold font-mono text-indigo-600 dark:text-rose-500 mb-.75">
+                Dev Bootcamp
+              </div>
+              <div class="text-sm font-mono text-indigo-400 dark:text-rose-200 mb-3">
+                Full Stack Engineering Certificate / 2017
+              </div>
+   
+              <article>3 month impersive developer bootcamp program focused on technologies like JavaScript, HTML, CSS, and Ruby on Rails. Gained practical experience with pair programming, and collaborative software development.</article>
+            </li>
+        </ul>
+        </ul>
+      </section>
 
-  <p>Currently, I'm open for work and new projects. Let's chat.</p>
+      <section class="animate space-y-6" id="tech-section">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h2>
+            Tech Stack
+          </h2>
+          <article>
+          <p>
+            This is a small sample of the technologies I'm already comfortable working with. Like every good developer though, I'm learning new stacks every day. Don't see your stack on here? Let's chat - I can work quickly to get up to speed on whatever stack your team is using. 
+          </p>
+        </article>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>    
+        <h3 class="mb-1">
+            Code
+        </h3>
+        <ul class="flex flex-col gap-4">
+          {CODE_STACK.map(tag => (
+            <li>
+              <Tag tag={tag} />
+            </li>
+          ))}
+        </ul>
+        </div>
+        
+        <div>    
+        <h3 class="mb-1">
+            CMS
+        </h3>
+        <ul class="flex flex-col gap-4">
+          {CMS_STACK.map(tag => (
+            <li>
+              <Tag tag={tag} />
+            </li>
+          ))}
+        </ul>
+        </div>
 
-  <div class="social-icons">
-    <a href="https://www.linkedin.com/in/cassigs/" target="__blank"><i class="fa-brands fa-square-linkedin"></i></a>
-    <a href="https://github.com/CassiGS" target="__blank"><i class="fa-brands fa-square-github"></i></a>
-  </div>
-</div>
-</BaseLayout>
+        <div>    
+           <h3 class="mb-1">
+            Design
+        </h3>
+             <ul class="flex flex-col gap-4">
+      {DESIGN_STACK.map(tag => (
+            <li>
+              <Tag tag={tag} />
+            </li>
+          ))}
+        </ul>
+        </div>
+
+        <div>    
+           <h3 class="mb-1">
+            General
+        </h3>
+             <ul class="flex flex-col gap-4">
+      {GENERAL_STACK.map(tag => (
+            <li>
+              <Tag tag={tag} />
+            </li>
+          ))}
+        </ul>
+        </div>
+      </div>
+      </section>
+
+      <section class="animate space-y-4">
+        <h2>
+          Let's Connect
+        </h2>
+        <article>
+          <p class="animate">
+            If you'd like to chat more about a role at your company or a new project - please reach out to me on <Link href="https://www.linkedin.com/in/cassigs/" external>LinkedIn</Link> or by email at      <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`}>
+              {SITE.EMAIL}
+            </Link>
+          </p>
+        </article>
+  
+      </section>
+    </div>
+  </Container>
+</PageLayout>
