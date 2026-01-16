@@ -2,8 +2,7 @@
 title: "cassigs.com"
 description: "Personal Portfolio Website"
 date: "Jan 16, 2026"
-liveURL: "https://astro-sphere-demo.vercel.app"
-repoURL: "https://github.com/markhorn-dev/astro-sphere"
+repoURL: "https://github.com/CassiGS/cassigs.com"
 ---
 
 <article class="animate prose show">

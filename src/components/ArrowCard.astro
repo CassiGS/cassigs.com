@@ -19,5 +19,18 @@ const { entry } = Astro.props;
       {entry.data.description}
     </div>
   </div>
-  <div><Link href={entry.data.repoURL}>github</Link> / live site / <Link href={`/projects/${entry.slug}`}>case study</Link></div>
-</div>
+<div>
+  {entry.data.repoURL && (
+    <>
+      <Link href={entry.data.repoURL}>github</Link> /
+    </>
+  )}
+
+  {entry.data.liveURL && (
+    <>
+      <Link href={entry.data.liveURL}>site</Link> /
+    </>
+  )}
+
+  <Link href={`/projects/${entry.slug}`}>case study</Link>
+</div></div>
