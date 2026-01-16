@@ -1,8 +1,10 @@
 ---
 import type { CollectionEntry } from "astro:content";
 
+import Link from "./Link.astro";
+
 type Props = {
-  entry: CollectionEntry<"blog"> | CollectionEntry<"projects">;
+  entry: CollectionEntry<"projects">;
 }
 
 const { entry } = Astro.props;
@@ -17,5 +19,5 @@ const { entry } = Astro.props;
       {entry.data.description}
     </div>
   </div>
-  <div><a href={entry.data.repoURL}>github</a> / live site / case study</div>
+  <div><Link href={entry.data.repoURL}>github</Link> / live site / <Link href={`/projects/${entry.slug}`}>case study</Link></div>
 </div>
