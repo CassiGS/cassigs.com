@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Fonts */
+  --font-heading: "JetBrains Mono", monospace;
+  --font-body: "Inter", sans-serif;
+
+  /* Typography */
+  --font_size--2: clamp(0.6944rem, 0.6234rem + 0.3157vw, 0.8681rem);
+  --font_size--1: clamp(0.8333rem, 0.7481rem + 0.3788vw, 1.0417rem);
+  --font_size-0: clamp(1rem, 0.8977rem + 0.4545vw, 1.25rem);
+  --font_size-1: clamp(1.2rem, 1.0773rem + 0.5455vw, 1.5rem);
+  --font_size-2: clamp(1.44rem, 1.2927rem + 0.6545vw, 1.8rem);
+  --font_size-3: clamp(1.728rem, 1.5513rem + 0.7855vw, 2.16rem);
+  --font_size-4: clamp(2.0736rem, 1.8615rem + 0.9425vw, 2.592rem);
+  --font_size-5: clamp(2.4883rem, 2.2338rem + 1.1311vw, 3.1104rem);
+
+  /* Colors */
+  --color-primary--dark: #282828;
+  --color-primary--light: #F9F6EF;
+  --color-secondary--dark: #193497;
+  --color-secondary--light: #B8D926;
+}
+
 html {
   overflow-y: scroll;
   color-scheme: light;
