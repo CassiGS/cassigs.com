@@ -4,14 +4,12 @@
   --font-body: "JetBrains Mono", monospace;
 
   /* Typography */
-  --font_size--2: clamp(0.6944rem, 0.6234rem + 0.3157vw, 0.8681rem);
-  --font_size--1: clamp(0.8333rem, 0.7481rem + 0.3788vw, 1.0417rem);
-  --font_size-0: clamp(1rem, 0.8977rem + 0.4545vw, 1.25rem);
-  --font_size-1: clamp(1.2rem, 1.0773rem + 0.5455vw, 1.5rem);
-  --font_size-2: clamp(1.44rem, 1.2927rem + 0.6545vw, 1.8rem);
-  --font_size-3: clamp(1.728rem, 1.5513rem + 0.7855vw, 2.16rem);
-  --font_size-4: clamp(2.0736rem, 1.8615rem + 0.9425vw, 2.592rem);
-  --font_size-5: clamp(2.4883rem, 2.2338rem + 1.1311vw, 3.1104rem);
+  --scale-ratio: 1.25; 
+  --font-size-1: clamp(1rem, 1rem, 1.25rem); /* Adjust min, preferred, and max values as needed */
+  --font-size-2: clamp(1.35rem, calc(var(--font-size-1) * var(--scale-ratio)), 1.65rem);
+  --font-size-3: clamp(1.75rem, calc(var(--font-size-2) * var(--scale-ratio)), 2.5rem);
+  --font-size-4: clamp(2.75rem, calc(var(--font-size-3) * var(--scale-ratio)), 3.75rem);
+  --font-size-5: clamp(4.5rem, calc(var(--font-size-4) * var(--scale-ratio)), 5.75rem);
 
   /* Colors */
   --color-primary--dark: #282828;
@@ -31,6 +29,9 @@
 
 body {
     background-color: var(--color-primary--light);
+    font-family: var(--font-body);
+    color: var(--color-primary--dark);
+
 }
 
 main {
@@ -41,9 +42,64 @@ main {
 }
 
 h1 {
-  font-size: var(--font_size-5);
+  font-size: var(--font-size-5);
   font-family: var(--font-heading);
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border-top: 2px solid var(--color-primary--dark);
+  border-bottom: 2px solid var(--color-primary--dark);
   padding: var(--space-m) 0;
+  margin: 4rem 0 2.5rem;
+}
+
+@media (min-width: 900px) {
+    .hero-home__nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+    }
+}
+
+.hero-home__subhead {
+    font-size: var(--font-size-2);
+    font-family: var(--font-body);
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: var(--space-m);
+}
+
+.hero-home__nav nav > li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    font-size: var(--font-size-1);
+    font-style: italic;
+    border: 2px solid var(--color-primary--dark);
+    margin-bottom: -2px;
+
+    & span {
+        font-style: italic;
+        padding: var(--space-s);
+        border-right: 2px solid var(--color-primary--dark);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & div {
+        padding: var(--space-s);
+        display: flex;
+    }
+}
+
+.hero-home__project-toc {
+    border-right: 2px solid var(--color-primary--dark);
+    border-left: 2px solid var(--color-primary--dark);
+
+    & ul {
+        padding: var(--space-xs) var(--space-l);
+        margin: 0;
+    }
+
+    & li {
+        margin: var(--space-xs) 0;
+    }
 }
