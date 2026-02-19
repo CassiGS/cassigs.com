@@ -47,7 +47,12 @@ h1 {
   border-top: 2px solid var(--color-primary--dark);
   border-bottom: 2px solid var(--color-primary--dark);
   padding: var(--space-m) 0;
-  margin: 4rem 0 2.5rem;
+  margin: 4rem 0 2rem;
+}
+
+.hero-home__nav {
+    background-color: var(--color-secondary--dark);
+    padding: var(--space-m);
 }
 
 @media (min-width: 900px) {
@@ -59,11 +64,14 @@ h1 {
 }
 
 .hero-home__subhead {
-    font-size: var(--font-size-2);
+    font-size: var(--font-size-1);
     font-family: var(--font-body);
     padding: 0;
     margin-top: 0;
-    margin-bottom: var(--space-m);
+    margin-bottom: var(--space-s);
+    color: var(--color-primary--light);
+    font-weight: 100;
+    line-height: 165%;
 }
 
 .hero-home__nav nav > li {
@@ -72,13 +80,16 @@ h1 {
     grid-template-columns: 56px 1fr;
     font-size: var(--font-size-1);
     font-style: italic;
-    border: 2px solid var(--color-primary--dark);
+    font-weight: 100;
+    border: 1px solid var(--color-primary--light);
     margin-bottom: -2px;
+    color: var(--color-primary--light);
+
 
     & span {
         font-style: italic;
         padding: var(--space-s);
-        border-right: 2px solid var(--color-primary--dark);
+        border-right: 1px solid var(--color-primary--light);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -91,11 +102,13 @@ h1 {
 }
 
 .hero-home__project-toc {
-    border-right: 2px solid var(--color-primary--dark);
-    border-left: 2px solid var(--color-primary--dark);
+    border-right: 1px solid var(--color-primary--light);
+    border-left: 1px solid var(--color-primary--light);
+    color: var(--color-primary--light);
+    padding: var(--space-xs) var(--space-l);
+
 
     & ul {
-        padding: var(--space-xs) var(--space-l);
         margin: 0;
     }
 
