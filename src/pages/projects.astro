@@ -1,0 +1,55 @@
+---
+import "../styles/global.css";
+import "../styles/projects.css";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Tag from "../components/Tag.astro";
+---
+
+<BaseLayout mainHeading="Projects">
+  <div class="project-heading">
+    <div>No.</div>
+    <div>Project</div>
+    <div>Tags</div>
+  </div>
+  <div class="project-list">
+    <div class="project-container">
+      <span>01</span>
+      Project Highlight: Scrolling Logos
+      <div class="tag-group">
+        <Tag>tag</Tag>
+        <Tag>tag</Tag>
+      </div>
+    </div>
+
+    <div class="project-container">
+      <span>01</span>
+
+      Project Highlight: Scrolling Logos
+      <div class="tag-group">
+        <Tag>tag</Tag>
+      </div>
+    </div>
+
+    <div class="project-container">
+      <span>01</span>
+
+      Project Highlight: Scrolling Logos
+      <div class="tag-group">
+        <Tag>tag</Tag>
+        <Tag>tag</Tag>
+        <Tag>tag</Tag>
+      </div>
+    </div>
+
+    <div class="project-container">
+      <span>01</span>
+
+      Project Highlight: Scrolling Logos
+      <div class="tag-group">
+        <Tag>tag</Tag>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

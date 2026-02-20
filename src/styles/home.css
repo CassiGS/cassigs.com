@@ -47,7 +47,7 @@ nav > ul {
     display: flex;
     flex-direction: column;
     gap: .75rem;
-    padding: var(--space-xs);
+    padding: var(--space-s);
     border-bottom: 1px solid color-mix(in srgb, var(--color-primary--light) 40%, transparent);
 }
 
@@ -62,8 +62,19 @@ nav > ul {
 .hero-home__all-projects {
     font-weight: 100;
     list-style: none;
-    padding: var(--space-xs);
+    padding: var(--space-s); 
+    text-decoration: none;
+    display: block;
+    color: color-mix(in srgb, var(--color-primary--light) 60%, transparent);
+    overflow: hidden;
+    position: relative;
+    width: fit-content;
+}
 
+
+.hero-home__all-projects:hover,
+.hero-home__all-projects:focus{
+    text-decoration: underline;
 }
 
 .hero-home__work-tag {

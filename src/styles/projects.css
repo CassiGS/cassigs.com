@@ -1,0 +1,36 @@
+.project-heading {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    padding: var(--space-xs) 0;
+    color: color-mix(in srgb, var(--color-primary--dark) 60%, transparent);
+    border-top: 1px solid color-mix(in srgb, var(--color-primary--dark) 20%, transparent);
+}
+.project-list {
+    display: grid;
+    grid-auto-rows: 1fr;
+    height: 100%; /* or a fixed height like 80vh, depending on your layout */
+}
+.project-container {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    padding: var(--space-m) 0;
+    align-items: start; 
+    border-top: 1px solid color-mix(in srgb, var(--color-primary--dark) 20%, transparent);
+
+    & span {
+        color: color-mix(in srgb, var(--color-primary--dark) 60%, transparent);
+    }
+}
+
+.tag-group {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+@media (min-width: 900px) {
+    .tag-group {
+        flex-direction: row;
+        gap: .5rem;
+    }
+}
