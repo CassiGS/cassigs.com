@@ -1,85 +1,73 @@
 ---
-import '../styles/global.css'
+import "../styles/global.css";
+import "../styles/home.css";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-		<title>Astro</title>
-	</head>
-	<body>
-		<main>
-			<div class="nav-area">
-				<div class="logo">CassiGS Development</div>
-			</div>
-			<h1>Cassi <br /> Gallagher-Shearer</h1>
-			<div class="hero-home__nav">
-				<div>
-					<p class="hero-home__subhead">
-						Frontend Engineer who enjoys CSS<br /> 
-						and building things on the web for<br /> 
-						<strong>real humans.</strong>
-					</p>
-					<div>
-						<div class="hero-home__tag-set">
-							<a href="#" class="tag">github</a>
-							<a href="#" class="tag">linkedin</a>
-						</div>
-						<div class="hero-home__work-tag">
-							Currently Available for Work
-						</div>
-					</div>
-				</div>
-				<nav>
-					
-						<li><a href="#"><span>01</span><div>Selected Work</div></a></li>
-						<div class="hero-home__project-toc">
-							<ul>
-								<li>
-									<div class="project-container">
-										Project Highlight: Scrolling Logos
-										<div class="hero-home__tag-set">
-											<a href="#" class="tag">github</a>
-											<a href="#" class="tag">linkedin</a>
-										</div>
-									</div>
-								</li>
-								<li><div class="project-container">
-										Project Highlight: Scrolling Logos
-										<div class="hero-home__tag-set">
-											<a href="#" class="tag">github</a>
-											<a href="#" class="tag">linkedin</a>
-										</div>
-									</div></li>
-								<li><div class="project-container">
-										Project Highlight: Scrolling Logos
-										<div class="hero-home__tag-set">
-											<a href="#" class="tag">github</a>
-											<a href="#" class="tag">linkedin</a>
-										</div>
-									</div></li>
-								<li><div class="project-container">
-										Project Highlight: Scrolling Logos
-										<div class="hero-home__tag-set">
-											<a href="#" class="tag">github</a>
-											<a href="#" class="tag">linkedin</a>
-										</div>
-									</div></li>
-								<li class="hero-home__all-projects"><span>See all projects →</span></li>
-							</ul>
-						</div>
-						<li><a href="#"><span>02</span><div>About</div></a></li>
-						<li><a href="#"><span>03</span><div>Contact</div></a></li>
-					</ul>
-				</nav>
-			</div>
-		</main>
-	</body>
-</html>
+<BaseLayout mainHeading={`Cassi Gallagehr-Shearer`}>
+  <div>
+    <p class="hero-home__subhead">
+      Frontend Engineer who enjoys CSS<br />
+      and building things on the web for<br />
+      <strong>real humans.</strong>
+    </p>
+    <div>
+      <div class="hero-home__tag-set">
+        <a href="#" class="tag">github</a>
+        <a href="#" class="tag">linkedin</a>
+      </div>
+      <div class="hero-home__work-tag">Currently Available for Work</div>
+    </div>
+  </div>
+  <nav class="hero-home__nav">
+    <ul>
+      <li><a href="#"><span>01</span><div>Selected Work</div></a></li>
+      <div class="hero-home__project-toc">
+        <ul>
+          <li>
+            <div class="project-container">
+              Project Highlight: Scrolling Logos
+              <div class="hero-home__tag-set">
+                <a href="#" class="tag">github</a>
+                <a href="#" class="tag">linkedin</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="project-container">
+              Project Highlight: Scrolling Logos
+              <div class="hero-home__tag-set">
+                <a href="#" class="tag">github</a>
+                <a href="#" class="tag">linkedin</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="project-container">
+              Project Highlight: Scrolling Logos
+              <div class="hero-home__tag-set">
+                <a href="#" class="tag">github</a>
+                <a href="#" class="tag">linkedin</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="project-container">
+              Project Highlight: Scrolling Logos
+              <div class="hero-home__tag-set">
+                <a href="#" class="tag">github</a>
+                <a href="#" class="tag">linkedin</a>
+              </div>
+            </div>
+          </li>
+          <li class="hero-home__all-projects">
+            <span>See all projects →</span>
+          </li>
+        </ul>
+      </div>
+      <li><a href="#"><span>02</span><div>About</div></a></li>
+      <li><a href="#"><span>03</span><div>Contact</div></a></li>
+    </ul>
+  </nav>
+</BaseLayout>
