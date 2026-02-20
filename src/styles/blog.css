@@ -1,0 +1,10 @@
+.blog-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 165%;
+    font-size: 14px;
+}
