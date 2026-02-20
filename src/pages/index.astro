@@ -5,6 +5,7 @@ import "../styles/home.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import Tag from "../components/Tag.astro";
+import NumberNav from "../components/NumberNav.astro";
 ---
 
 <BaseLayout mainHeading={`Cassi Gallagehr-Shearer`}>
@@ -22,10 +23,10 @@ import Tag from "../components/Tag.astro";
       <div class="hero-home__work-tag">Currently Available for Work</div>
     </div>
   </div>
-  <nav class="hero-home__nav">
+  <nav>
     <ul>
-      <li><a href="#"><span>01</span><div>Selected Work</div></a></li>
-      <div class="hero-home__project-toc">
+      <li><NumberNav dark link="#" number="01" text="Selected Work" /></li>
+      <li class="hero-home__project-toc">
         <ul>
           <li>
             <div class="project-container">
@@ -67,9 +68,16 @@ import Tag from "../components/Tag.astro";
             <span>See all projects →</span>
           </li>
         </ul>
-      </div>
-      <li><a href="#"><span>02</span><div>About</div></a></li>
-      <li><a href="#"><span>03</span><div>Contact</div></a></li>
+      </li>
+      <li><NumberNav dark link="#" number="02" text="About" /></li>
+      <li>
+        <NumberNav
+          dark
+          link="mailto:ccgall@gmail.com"
+          number="03"
+          text="Contact"
+        />
+      </li>
     </ul>
   </nav>
 </BaseLayout>
