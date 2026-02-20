@@ -42,13 +42,28 @@ main {
   margin: 0 auto;
 }
 
+.nav-area {
+    display: flex;
+    justify-content: end;
+}
+
+.logo {
+    margin: var(--space-s) 0;
+
+    background-color: var(--color-secondary--light);
+    color: var(--color-primary--dark);
+    font-weight: 800;
+    padding: .5rem;
+    width: fit-content;
+}
+
 h1 {
   font-size: var(--font-size-5);
   font-family: var(--font-heading);
   border-top: 2px solid var(--color-primary--dark);
   border-bottom: 2px solid var(--color-primary--dark);
   padding: var(--space-m) 0;
-  margin: 4rem 0 2rem;
+  margin: 0 0 var(--space-m);
 }
 
 .hero-home__nav {
