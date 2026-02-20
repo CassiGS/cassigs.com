@@ -1,0 +1,46 @@
+---
+import "../styles/global.css";
+
+const { link, dark } = Astro.props;
+---
+
+{
+  link ? (
+    <a href={link} class:list={["tag", { dark }]}>
+      <slot />
+    </a>
+  ) : (
+    <span class:list={["tag", { dark }]}>
+      <slot />
+    </span>
+  )
+}
+
+<style>
+  .tag {
+    color: var(--color-primary--dark);
+    border: 1px solid var(--color-primary--dark);
+    text-decoration: none;
+    font-size: var(--font-size-05);
+    padding: 0.25rem 0.5rem;
+    opacity: 70%;
+    transition: all ease-in-out 0.5s;
+  }
+
+  a.tag:hover {
+    color: var(--color-primary--light);
+    border: 1px solid var(--color-primary--dark);
+    background-color: var(--color-primary--dark);
+  }
+
+  .tag.dark {
+    color: var(--color-primary--light);
+    border: 1px solid var(--color-primary--light);
+  }
+
+  a.tag.dark:hover {
+    color: var(--color-primary--dark);
+    border: 1px solid var(--color-primary--light);
+    background-color: var(--color-primary--light);
+  }
+</style>

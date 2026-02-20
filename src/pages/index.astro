@@ -3,6 +3,8 @@ import "../styles/global.css";
 import "../styles/home.css";
 
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Tag from "../components/Tag.astro";
 ---
 
 <BaseLayout mainHeading={`Cassi Gallagehr-Shearer`}>
@@ -14,8 +16,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </p>
     <div>
       <div class="hero-home__tag-set">
-        <a href="#" class="tag">github</a>
-        <a href="#" class="tag">linkedin</a>
+        <Tag link="#" dark>github</Tag>
+        <Tag link="#" dark>linkedin</Tag>
       </div>
       <div class="hero-home__work-tag">Currently Available for Work</div>
     </div>
