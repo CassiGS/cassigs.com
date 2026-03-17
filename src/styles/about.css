@@ -1,0 +1,195 @@
+main {
+    background-color: var(--color-secondary--dark);
+    padding: var(--space-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+/* ── Intro Section ─────────────────────────────────────── */
+
+.about-intro {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: var(--space-l);
+}
+
+@media (min-width: 700px) {
+    .about-intro {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        align-items: start;
+    }
+}
+
+.about-intro__bio {
+    color: var(--color-primary--light);
+    font-weight: 100;
+    line-height: 165%;
+}
+
+.about-intro__bio p {
+    margin-top: 0;
+}
+
+.about-intro__photo {
+    aspect-ratio: 3 / 4;
+    background-color: color-mix(in srgb, var(--color-primary--light) 10%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-primary--light) 30%, transparent);
+    overflow: hidden;
+    max-height: 480px;
+}
+
+.about-intro__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-intro__photo--placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: color-mix(in srgb, var(--color-primary--light) 30%, transparent);
+    font-size: var(--font-size-05);
+    font-style: italic;
+}
+
+/* ── Tab Section ───────────────────────────────────────── */
+
+.about-tabs {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 0;
+}
+
+@media (min-width: 700px) {
+    .about-tabs {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto;
+        align-items: start;
+    }
+}
+
+/* Content panel — renders first visually on mobile (top), on desktop it's the left column */
+.about-tabs__content {
+    order: 2;
+    border: 1px solid var(--color-primary--light);
+    padding: var(--space-l);
+    color: var(--color-primary--light);
+    font-weight: 100;
+    line-height: 165%;
+    min-height: 240px;
+}
+
+@media (min-width: 700px) {
+    .about-tabs__content {
+        order: 1;
+        border-right: none;
+        /* align border with nav items — offset the stacked margin-bottom: -1px trick */
+        margin-bottom: 0;
+    }
+}
+
+.about-tabs__content h2 {
+    margin-top: 0;
+    font-size: var(--font-size-2);
+    color: var(--color-primary--light);
+}
+
+.about-tabs__content p {
+    margin: 0 0 var(--space-s);
+}
+
+.about-tabs__content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Tab panel visibility */
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* Nav — renders second visually on mobile (below content), on desktop it's the right column */
+.about-tabs__nav {
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+}
+
+@media (min-width: 700px) {
+    .about-tabs__nav {
+        order: 2;
+        flex-direction: column;
+        overflow-x: visible;
+        min-width: 220px;
+    }
+}
+
+/* NumberNav-style tab buttons */
+.tab-btn {
+    all: unset;
+    cursor: pointer;
+
+    border: 1px solid var(--color-primary--light);
+    color: var(--color-primary--light);
+
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    font-size: var(--font-size-1);
+    font-family: var(--font-body);
+    font-style: italic;
+    font-weight: 100;
+    text-decoration: none;
+    transition: all ease-in-out 0.25s;
+    white-space: nowrap;
+
+    /* horizontal: collapse side borders between items */
+    margin-right: -1px;
+}
+
+@media (min-width: 700px) {
+    .tab-btn {
+        /* vertical: collapse top/bottom borders between items */
+        margin-right: 0;
+        margin-bottom: -1px;
+    }
+}
+
+.tab-btn span {
+    border-right: 1px solid var(--color-primary--light);
+    font-style: italic;
+    padding: var(--space-s);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-btn div {
+    padding: var(--space-s);
+    display: flex;
+    align-items: center;
+}
+
+.tab-btn:hover,
+.tab-btn:focus-visible {
+    background-color: color-mix(in srgb, var(--color-primary--light) 10%, transparent);
+    outline: none;
+}
+
+.tab-btn.active {
+    background-color: var(--color-primary--light);
+    color: var(--color-primary--dark);
+}
+
+.tab-btn.active span {
+    border-right-color: var(--color-primary--dark);
+}

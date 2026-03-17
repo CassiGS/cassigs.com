@@ -1,0 +1,103 @@
+---
+import "../styles/global.css";
+import "../styles/about.css";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout mainHeading="About">
+
+  <!-- ── Intro ──────────────────────────────────────────── -->
+  <div class="about-intro">
+    <div class="about-intro__bio">
+      <p>
+        Hi, I'm Cassi — a Frontend Engineer based in [City]. I love CSS,
+        thoughtful UI, and building experiences that feel good for real humans.
+      </p>
+      <p>
+        I've spent [X] years working across design systems, accessibility, and
+        interactive interfaces. When I'm not writing code, you'll find me
+        [hobby / interest].
+      </p>
+    </div>
+
+    <div class="about-intro__photo">
+      <!-- Replace src with your actual photo path -->
+      <!-- <img src="/your-photo.jpg" alt="Cassi Gallagher-Shearer" /> -->
+      <div class="about-intro__photo--placeholder">photo</div>
+    </div>
+  </div>
+
+  <!-- ── Tabbed Detail Section ──────────────────────────── -->
+  <div class="about-tabs">
+
+    <div class="about-tabs__content" id="tab-content">
+
+      <div class="tab-panel active" id="panel-work">
+        <h2>Previous Work</h2>
+        <p>Company / Role — Year – Year</p>
+        <p>Brief description of what you did and what you built.</p>
+        <p>Company / Role — Year – Year</p>
+        <p>Brief description of what you did and what you built.</p>
+      </div>
+
+      <div class="tab-panel" id="panel-school">
+        <h2>School</h2>
+        <p>University / Program — Year</p>
+        <p>Brief notes on your studies, focus areas, or notable projects.</p>
+      </div>
+
+      <div class="tab-panel" id="panel-skills">
+        <h2>Skills</h2>
+        <p>HTML · CSS · JavaScript · TypeScript · Astro · React</p>
+        <p>Accessibility · Design Systems · CSS Architecture · Performance</p>
+        <p>Figma · Git · Node.js</p>
+      </div>
+
+      <div class="tab-panel" id="panel-hobbies">
+        <h2>Hobbies</h2>
+        <p>Tell me what you like to do outside of work.</p>
+        <p>Add as many paragraphs as you want here.</p>
+      </div>
+
+    </div>
+
+    <nav class="about-tabs__nav" aria-label="About sections">
+      <button class="tab-btn active" data-panel="panel-work">
+        <span>01</span>
+        <div>Previous Work</div>
+      </button>
+      <button class="tab-btn" data-panel="panel-school">
+        <span>02</span>
+        <div>School</div>
+      </button>
+      <button class="tab-btn" data-panel="panel-skills">
+        <span>03</span>
+        <div>Skills</div>
+      </button>
+      <button class="tab-btn" data-panel="panel-hobbies">
+        <span>04</span>
+        <div>Hobbies</div>
+      </button>
+    </nav>
+
+  </div>
+
+</BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>(".tab-btn");
+  const panels = document.querySelectorAll<HTMLDivElement>(".tab-panel");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const target = btn.dataset.panel;
+
+      buttons.forEach((b) => b.classList.remove("active"));
+      panels.forEach((p) => p.classList.remove("active"));
+
+      btn.classList.add("active");
+      document.getElementById(target!)?.classList.add("active");
+    });
+  });
+</script>
