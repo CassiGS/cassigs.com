@@ -1,0 +1,225 @@
+/* ── Well ──────────────────────────────────────────────── */
+
+.project-post-well {
+    width: 90%;
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 var(--space-s);
+}
+
+/* ── Post header ───────────────────────────────────────── */
+
+.post-title {
+    font-size: var(--font-size-4);
+    font-family: var(--font-heading);
+    border-top: 2px solid var(--color-primary--dark);
+    border-bottom: 2px solid var(--color-primary--dark);
+    padding: var(--space-m) 0;
+    margin: 0 0 var(--space-m);
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-m);
+    flex-wrap: wrap;
+}
+
+.post-meta__date {
+    font-size: var(--font-size-05);
+    font-weight: 100;
+    color: color-mix(in srgb, var(--color-primary--dark) 60%, transparent);
+    font-style: italic;
+}
+
+.post-meta__tags {
+    display: flex;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+}
+
+.post-meta__tag {
+    font-size: var(--font-size-05);
+    border: 1px solid var(--color-primary--dark);
+    padding: 0.2rem 0.5rem;
+    color: var(--color-primary--dark);
+    opacity: 0.7;
+}
+
+/* ── Prose content ─────────────────────────────────────── */
+
+.project-post-content {
+    padding-bottom: var(--space-3xl);
+}
+
+/* Headings — prose scale, no border overrides from global */
+.project-post-content h1 {
+    font-size: var(--font-size-3);
+    border: none;
+    padding: 0;
+    margin: var(--space-xl) 0 var(--space-s);
+}
+
+.project-post-content h2 {
+    font-size: var(--font-size-2);
+    margin: var(--space-l) 0 var(--space-s);
+    padding-bottom: var(--space-xs);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-primary--dark) 20%, transparent);
+}
+
+.project-post-content h3 {
+    font-size: var(--font-size-1);
+    font-weight: 700;
+    margin: var(--space-l) 0 var(--space-xs);
+}
+
+.project-post-content h4,
+.project-post-content h5,
+.project-post-content h6 {
+    font-size: var(--font-size-1);
+    font-weight: 600;
+    font-style: italic;
+    margin: var(--space-m) 0 var(--space-xs);
+}
+
+/* Paragraph */
+.project-post-content p {
+    line-height: 175%;
+    font-weight: 300;
+    margin: 0 0 var(--space-m);
+    font-size: var(--font-size-1);
+}
+
+/* Links */
+.project-post-content a {
+    color: var(--color-secondary--dark);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity ease-in-out 0.2s;
+}
+
+.project-post-content a:hover {
+    opacity: 0.7;
+}
+
+/* Strong / Em */
+.project-post-content strong {
+    font-weight: 700;
+}
+
+.project-post-content em {
+    font-style: italic;
+}
+
+/* Strikethrough */
+.project-post-content del {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+/* Lists */
+.project-post-content ul,
+.project-post-content ol {
+    margin: 0 0 var(--space-m);
+    padding-left: var(--space-l);
+    line-height: 175%;
+    font-weight: 300;
+}
+
+.project-post-content li {
+    margin-bottom: var(--space-xs);
+}
+
+.project-post-content li::marker {
+    color: color-mix(in srgb, var(--color-primary--dark) 40%, transparent);
+}
+
+/* Nested list */
+.project-post-content li > ul,
+.project-post-content li > ol {
+    margin: var(--space-xs) 0 0;
+}
+
+/* Blockquote */
+.project-post-content blockquote {
+    margin: var(--space-l) 0;
+    padding: var(--space-m) var(--space-l);
+    border-left: 3px solid var(--color-secondary--dark);
+    background-color: color-mix(in srgb, var(--color-secondary--dark) 5%, transparent);
+    font-style: italic;
+    font-weight: 200;
+}
+
+.project-post-content blockquote p {
+    margin: 0;
+}
+
+/* Inline code */
+.project-post-content code {
+    font-family: var(--font-body);
+    font-size: 0.875em;
+    background-color: color-mix(in srgb, var(--color-primary--dark) 8%, transparent);
+    padding: 0.15em 0.4em;
+    border: 1px solid color-mix(in srgb, var(--color-primary--dark) 15%, transparent);
+}
+
+/* Code block */
+.project-post-content pre {
+    margin: 0 0 var(--space-m);
+    padding: var(--space-m);
+    background-color: var(--color-primary--dark);
+    overflow-x: auto;
+    border-left: 3px solid var(--color-secondary--light);
+}
+
+.project-post-content pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: var(--font-size-05);
+    color: var(--color-primary--light);
+    line-height: 170%;
+}
+
+/* Horizontal rule */
+.project-post-content hr {
+    border: none;
+    border-top: 1px solid color-mix(in srgb, var(--color-primary--dark) 20%, transparent);
+    margin: var(--space-xl) 0;
+}
+
+/* Image */
+.project-post-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: var(--space-l) 0;
+    border: 1px solid color-mix(in srgb, var(--color-primary--dark) 15%, transparent);
+}
+
+/* Table */
+.project-post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 var(--space-m);
+    font-size: var(--font-size-05);
+}
+
+.project-post-content th {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-align: left;
+    padding: var(--space-xs) var(--space-s);
+    border-bottom: 2px solid var(--color-primary--dark);
+}
+
+.project-post-content td {
+    padding: var(--space-xs) var(--space-s);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-primary--dark) 15%, transparent);
+    font-weight: 300;
+    line-height: 165%;
+}
+
+.project-post-content tr:last-child td {
+    border-bottom: none;
+}
