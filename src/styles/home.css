@@ -49,6 +49,13 @@ nav > ul {
     gap: .75rem;
     padding: var(--space-s);
     border-bottom: 1px solid color-mix(in srgb, var(--color-primary--light) 40%, transparent);
+    text-decoration: none;
+    color: inherit;
+    transition: opacity ease-in-out 0.2s;
+}
+
+.project-container:hover {
+    opacity: 0.7;
 }
 
 @media (min-width: 1225px) {
