@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 
-import HomeNav from "../components/HomeNav.astro";
+import Nav from "../components/Nav.astro";
 
 const { pageTitle, mainHeading } = Astro.props;
 ---
@@ -22,7 +22,7 @@ const { pageTitle, mainHeading } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <HomeNav />
+    <Nav />
     <div class="container">
       <h1>{mainHeading}</h1>
     </div>

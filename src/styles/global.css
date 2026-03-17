@@ -39,20 +39,6 @@ body {
     font-size: var(--font-size-1);
 }
 
-.nav-area {
-    display: flex;
-    justify-content: end;
-}
-
-.logo {
-    margin: var(--space-s) 0;
-
-    background-color: var(--color-secondary--light);
-    color: var(--color-primary--dark);
-    font-weight: 800;
-    padding: .5rem;
-    width: fit-content;
-}
 
 h1 {
   font-size: var(--font-size-5);

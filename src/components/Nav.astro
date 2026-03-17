@@ -1,0 +1,66 @@
+---
+---
+
+<header class="site-nav">
+  <a href="/" class="site-nav__logo">CassiGS Development</a>
+
+  <nav class="site-nav__links" aria-label="Main navigation">
+    <a href="/" class="site-nav__link">Home</a>
+    <a href="/about" class="site-nav__link">About</a>
+    <a href="/projects" class="site-nav__link">Work</a>
+    <a href="mailto:ccgall@gmail.com" class="site-nav__contact">Contact</a>
+  </nav>
+</header>
+
+<style>
+  .site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-s) 0;
+  }
+
+  .site-nav__logo {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: var(--font-size-1);
+    color: var(--color-primary--dark);
+    text-decoration: none;
+  }
+
+  .site-nav__links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-m);
+  }
+
+  .site-nav__link {
+    font-family: var(--font-body);
+    font-size: var(--font-size-05);
+    font-weight: 100;
+    color: var(--color-primary--dark);
+    text-decoration: none;
+    transition: opacity ease-in-out 0.2s;
+  }
+
+  .site-nav__link:hover,
+  .site-nav__link:focus-visible {
+    opacity: 0.6;
+  }
+
+  .site-nav__contact {
+    font-family: var(--font-body);
+    font-size: var(--font-size-05);
+    font-weight: 800;
+    color: var(--color-primary--dark);
+    text-decoration: none;
+    background-color: var(--color-secondary--light);
+    padding: 0.5rem 0.75rem;
+    transition: opacity ease-in-out 0.2s;
+  }
+
+  .site-nav__contact:hover,
+  .site-nav__contact:focus-visible {
+    opacity: 0.8;
+  }
+</style>
