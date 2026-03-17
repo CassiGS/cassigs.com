@@ -14,6 +14,13 @@ main {
     }
 }
 
+.hero-home__textblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+        height: 100%;
+}
+
 .hero-home__subhead {
     font-size: var(--font-size-1);
     font-family: var(--font-body);
@@ -93,6 +100,9 @@ nav > ul {
     width: fit-content;
     font-weight: 100;
     text-transform: uppercase;
+    background-color: rgba(255, 255, 255, .1);
+    border: 1px solid var(--color-primary--light);
+
 }
 
 .hero-home__tag-set {
