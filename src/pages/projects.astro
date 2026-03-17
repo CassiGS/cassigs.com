@@ -3,8 +3,14 @@ import "../styles/global.css";
 import "../styles/projects.css";
 
 import SubLayout from "../layouts/SubLayout.astro";
-
 import Tag from "../components/Tag.astro";
+
+const postModules = import.meta.glob<{
+  frontmatter: { title: string; tags?: string[] };
+  url: string;
+}>("./projects/*.md", { eager: true });
+
+const posts = Object.values(postModules);
 ---
 
 <SubLayout mainHeading="Projects">
@@ -14,42 +20,16 @@ import Tag from "../components/Tag.astro";
     <div>Tags</div>
   </div>
   <div class="project-list">
-    <div class="project-container">
-      <span>01</span>
-      Project Highlight: Scrolling Logos
-      <div class="tag-group">
-        <Tag>tag</Tag>
-        <Tag>tag</Tag>
-      </div>
-    </div>
-
-    <div class="project-container">
-      <span>01</span>
-
-      Project Highlight: Scrolling Logos
-      <div class="tag-group">
-        <Tag>tag</Tag>
-      </div>
-    </div>
-
-    <div class="project-container">
-      <span>01</span>
-
-      Project Highlight: Scrolling Logos
-      <div class="tag-group">
-        <Tag>tag</Tag>
-        <Tag>tag</Tag>
-        <Tag>tag</Tag>
-      </div>
-    </div>
-
-    <div class="project-container">
-      <span>01</span>
-
-      Project Highlight: Scrolling Logos
-      <div class="tag-group">
-        <Tag>tag</Tag>
-      </div>
-    </div>
+    {posts.map((post, i) => (
+      <a href={post.url} class="project-container">
+        <span>{String(i + 1).padStart(2, "0")}</span>
+        {post.frontmatter.title}
+        <div class="tag-group">
+          {post.frontmatter.tags?.map((tag: string) => (
+            <Tag>{tag}</Tag>
+          ))}
+        </div>
+      </a>
+    ))}
   </div>
 </SubLayout>

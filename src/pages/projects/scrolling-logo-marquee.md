@@ -4,6 +4,7 @@ title: Scrolling Logo Marquee
 description: Building a performant, accessible infinite scroll marquee for a client's partner logos section — no JavaScript required.
 date: March 2026
 tags: ["CSS", "Accessibility", "Animation", "No JS"]
+featured: true
 ---
 
 ## Overview
@@ -51,8 +52,12 @@ The outer `.marquee` is `overflow: hidden`. Both tracks sit side-by-side via fle
 
 ```css
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .marquee__group {
@@ -77,12 +82,12 @@ Translating by `-50%` works because the duplicated set means the full scrollable
 
 ## Accessibility considerations
 
-| Concern | Solution |
-| --- | --- |
-| Duplicate content in DOM | `aria-hidden="true"` on second track |
+| Concern                  | Solution                                                                    |
+| ------------------------ | --------------------------------------------------------------------------- |
+| Duplicate content in DOM | `aria-hidden="true"` on second track                                        |
 | Whole marquee decorative | `aria-hidden="true"` on outer wrapper; separate visually-hidden list for AT |
-| Motion sensitivity | `animation-play-state: paused` under `prefers-reduced-motion` |
-| Focus management | No interactive elements inside the marquee |
+| Motion sensitivity       | `animation-play-state: paused` under `prefers-reduced-motion`               |
+| Focus management         | No interactive elements inside the marquee                                  |
 
 ---
 
@@ -106,7 +111,7 @@ Rather than stopping abruptly, pausing the animation means the logos are still v
 }
 ```
 
-This approach is cleaner for content that *should* be readable, like a list of partners rather than pure decoration.
+This approach is cleaner for content that _should_ be readable, like a list of partners rather than pure decoration.
 
 ---
 
