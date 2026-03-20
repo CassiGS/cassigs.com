@@ -4,19 +4,18 @@ const hasToc = Astro.slots.has("default");
 ---
 
 <div class="number-nav-wrapper">
-  {
-    link ? (
-      <a href={link} class:list={["number-nav", { dark }]}>
-        <span>{number}</span>
-        <div>{text}</div>
-      </a>
-    ) : (
-      <div class:list={["number-nav", { dark }]}>
-        <span>{number}</span>
-        <div>{text}</div>
-      </div>
-    )
-  }
+  <div class:list={["number-nav", { dark }]}>
+    <span>{number}</span>
+    {
+      link ? (
+        <a href={link} class="number-nav__text">
+          {text}
+        </a>
+      ) : (
+        <div class="number-nav__text">{text}</div>
+      )
+    }
+  </div>
   {
     hasToc && (
       <div class="number-nav__toc">
@@ -39,7 +38,6 @@ const hasToc = Astro.slots.has("default");
     display: grid;
     grid-template-columns: 56px 1fr;
     font-size: 14px;
-    text-decoration: none;
     transition: all ease-in-out 0.3s;
     font-weight: 300;
 
@@ -51,14 +49,18 @@ const hasToc = Astro.slots.has("default");
       font-weight: 100;
       font-style: italic;
     }
-
-    & div {
-      padding: var(--space-s);
-      display: flex;
-    }
   }
 
-  a.number-nav div:hover {
+  .number-nav__text,
+  a.number-nav__text {
+    padding: var(--space-s);
+    display: flex;
+    align-items: center;
+    color: var(--color-dark);
+    text-decoration: none;
+  }
+
+  a.number-nav__text:hover {
     text-decoration: underline;
   }
 

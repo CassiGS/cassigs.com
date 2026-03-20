@@ -3,9 +3,8 @@ import "../styles/global.css";
 import "../styles/home.css";
 
 import BaseLayout from "../layouts/BaseLayout.astro";
-
 import Tag from "../components/Tag.astro";
-import NumberNav from "../components/NumberNav.astro";
+import NumberNavList from "../components/NumberNavList.astro";
 
 const postModules = import.meta.glob<{
   frontmatter: { title: string; tags?: string[]; featured?: boolean };
@@ -15,6 +14,12 @@ const postModules = import.meta.glob<{
 const featuredPosts = Object.values(postModules).filter(
   (p) => p.frontmatter.featured === true,
 );
+
+const navItems = [
+  { text: "Selected Work", link: "#" },
+  { text: "About", link: "/about" },
+  { text: "Contact", link: "mailto:ccgall@gmail.com" },
+];
 ---
 
 <BaseLayout mainHeading={`Cassi Gallagher-Shearer`} pageIndex="i">
@@ -23,34 +28,21 @@ const featuredPosts = Object.values(postModules).filter(
     I enjoy solving problems on the web and I'll make friends with your
     marketing team.
   </p>
-  <nav>
-    <ul>
-      <li>
-        <NumberNav dark link="#" number="01" text="Selected Work">
-          {featuredPosts.map((post) => (
-            <a href={post.url} class="project-container">
-              {post.frontmatter.title}
-              <div>
-                {post.frontmatter.tags?.map((tag) => (
-                  <Tag dark>{tag}</Tag>
-                ))}
-              </div>
-            </a>
-          ))}
-          <a href="/projects" class="hero-home__all-projects">
-            See all projects →
-          </a>
-        </NumberNav>
-      </li>
-      <li><NumberNav dark link="/about" number="02" text="About" /></li>
-      <li>
-        <NumberNav
-          dark
-          link="mailto:ccgall@gmail.com"
-          number="03"
-          text="Contact"
-        />
-      </li>
-    </ul>
-  </nav>
+  <NumberNavList items={navItems}>
+    <Fragment slot="toc-1">
+      {featuredPosts.map((post) => (
+        <a href={post.url} class="project-container">
+          {post.frontmatter.title}
+          <div>
+            {post.frontmatter.tags?.map((tag) => (
+              <Tag dark>{tag}</Tag>
+            ))}
+          </div>
+        </a>
+      ))}
+      <a href="/projects" class="hero-home__all-projects">
+        See all projects →
+      </a>
+    </Fragment>
+  </NumberNavList>
 </BaseLayout>
