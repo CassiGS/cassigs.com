@@ -1,6 +1,6 @@
 :root {
   /* Fonts */
-  --font-heading: "Inter", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
   --font-body: "JetBrains Mono", monospace;
 
   /* Typography */
@@ -18,6 +18,10 @@
   --color-secondary--dark: #193497;
   --color-secondary--light: #B8D926;
 
+  --color-cream: #f2ede6;
+  --color-white: #fdfbf7;
+  --color-black: #1a1a1a;
+
   /* Spacing */
   --space-xs: clamp(0.75rem, 0.6733rem + 0.3409vw, 0.9375rem);
   --space-s: clamp(1rem, 0.8977rem + 0.4545vw, 1.25rem);
@@ -29,24 +33,60 @@
 }
 
 body {
-    background-color: var(--color-primary--light);
+    background-color: var(--color-cream);
     font-family: var(--font-body);
-    color: var(--color-primary--dark);
-    width: 90%;
-    max-width: 1500px;
-    padding: 0 var(--space-s);
-    margin: 0 auto;
+    color: var(--color-black);
     font-size: var(--font-size-1);
+}
+
+.paper-container {
+    width: 90%;
+    max-width: 2400px;
+    margin: var(--space-l) auto;
+    background-color: var(--color-white);
+    box-shadow: 2px 2px 2px #d5cfc5;
+    background-image:
+        linear-gradient(
+        180deg,
+        var(--color-white) 12px, 0,
+        rgba(0,0,0, .1) 15px, 0,
+        var(--color-cream) 20px, 0,
+        var(--color-white) 100%
+        ),
+        radial-gradient(
+        circle closest-side,
+        rgba(255,255,255,0) 88%,
+        var(--color-white) 100%
+        ),
+        radial-gradient(
+        circle at 8px 22px,
+        var(--color-cream) 40%,
+        var(--color-cream) 40%,
+        #d5cfc5 100%
+        );
+    background-size: 8px 32px, 16px 32px, 16px 32px;
+    background-repeat: no-repeat space;
+    background-position: left center, 6px center, 6px center;
+    --binding-width: 20px;
+    --content-padding: var(--space-l);
+    padding: var(--space-l) var(--content-padding);
+    padding-left: calc(var(--binding-width) + var(--space-2xl));
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .paper-container {
+        width: 100%;
+        margin: 0 auto;
+        --content-padding: var(--space-s);
+    }
 }
 
 
 h1 {
   font-size: var(--font-size-5);
   font-family: var(--font-heading);
-  border-top: 2px solid var(--color-primary--dark);
-  border-bottom: 2px solid var(--color-primary--dark);
-  padding: var(--space-m) 0;
-  margin: 0 0 var(--space-m);
+
 }
 
 h2 {
