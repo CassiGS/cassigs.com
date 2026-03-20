@@ -3,7 +3,14 @@ import "../styles/global.css";
 import "../styles/about.css";
 
 import BaseLayout from "../layouts/BaseLayout.astro";
-import AboutTabs from "../components/AboutTabs.tsx";
+import NumberNavList from "../components/NumberNavList.astro";
+
+const navItems = [
+  { text: "Education" },
+  { text: "Expririence" },
+  { text: "Skills" },
+  { text: "Hobbies" },
+];
 ---
 
 <BaseLayout mainHeading="About" pageIndex="iii">
@@ -51,5 +58,5 @@ import AboutTabs from "../components/AboutTabs.tsx";
   </div>
 
   <!-- ── Tabbed Detail Section ──────────────────────────── -->
-  <AboutTabs client:load />
+  <NumberNavList items={navItems} />
 </BaseLayout>

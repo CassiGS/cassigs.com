@@ -8,7 +8,7 @@
 
 @media (min-width: 700px) {
     .about-intro {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
         grid-template-rows: auto;
         align-items: start;
     }
