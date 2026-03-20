@@ -1,0 +1,25 @@
+---
+const { pageIndex } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <span class="site-footer__left">&copy; {year} Cassi Gallagher-Shearer</span>
+  <span class="site-footer__right"
+    >Built with Astro and Netlify | {pageIndex}</span
+  >
+</footer>
+
+<style>
+  .site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-s) 0;
+    border-top: 1px solid var(--color-cream);
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-dark);
+    font-weight: 100;
+  }
+</style>

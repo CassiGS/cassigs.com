@@ -17,6 +17,7 @@
     font-weight: 100;
     line-height: 165%;
     max-width: 45vw;
+    font-weight: 200;
 }
 
 nav > ul {
@@ -29,12 +30,12 @@ nav > ul {
 }
 
 .hero-home__project-toc {
-    border-right: 1px solid var(--color-primary--light);
-    border-left: 1px solid var(--color-primary--light);
-    color: var(--color-primary--light);
+    border-right: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border);
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-cream);
+    color: var(--color-dark);
     font-size: var(--font-size-05);
-
-
 }
 
 .project-container {

@@ -18,26 +18,25 @@ const { link, dark, number, text } = Astro.props;
 
 <style>
   .number-nav {
-    border: 1px solid var(--color-primary--dark);
-    color: var(--color-primary--dark);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-cream);
+    color: var(--color-dark);
 
     display: grid;
     grid-template-columns: 56px 1fr;
-    font-size: var(--font-size-1);
-    font-style: italic;
-    font-weight: 100;
+    font-size: 14px;
     margin-bottom: -1px;
     text-decoration: none;
-    transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.3s;
+    font-weight: 300;
 
     & span {
-      border-right: 1px solid var(--color-primary--dark);
-
-      font-style: italic;
       padding: var(--space-s);
       display: flex;
       align-items: center;
       justify-content: center;
+      font-weight: 100;
+      font-style: italic;
     }
 
     & div {
@@ -46,18 +45,8 @@ const { link, dark, number, text } = Astro.props;
     }
   }
 
-  .number-nav.dark {
-    border: 1px solid var(--color-primary--light);
-    color: var(--color-primary--light);
-
-    & span {
-      border-right: 1px solid var(--color-primary--light);
-    }
-  }
-
-  a.number-nav.dark:hover {
-    color: var(--color-primary--dark);
-    border: 1px solid var(--color-primary--light);
-    background-color: var(--color-primary--light);
+  a.number-nav:hover {
+    background-color: var(--color-white);
+    border-color: var(--color-white);
   }
 </style>
