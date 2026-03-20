@@ -2,22 +2,44 @@
 import "../styles/global.css";
 import "../styles/about.css";
 
-import SubLayout from "../layouts/SubLayout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import AboutTabs from "../components/AboutTabs.tsx";
 ---
 
-<SubLayout mainHeading="About">
+<BaseLayout mainHeading="About" pageIndex="iii">
   <!-- ── Intro ──────────────────────────────────────────── -->
   <div class="about-intro">
     <div class="about-intro__bio">
       <p>
-        Hi, I'm Cassi — a Frontend Engineer based in [City]. I love CSS,
-        thoughtful UI, and building experiences that feel good for real humans.
+        Hi I'm Cassi. I'm a frontend engineer focused on web development and web
+        engineering.
       </p>
       <p>
-        I've spent [X] years working across design systems, accessibility, and
-        interactive interfaces. When I'm not writing code, you'll find me [hobby
-        / interest].
+        I started out as a Visual Journalism major focusing on photography and
+        design, and have worn many hats since then from customer service to
+        email development.
+      </p>
+
+      <p>
+        I eventually made the shift to web development as it's something I've
+        always enjoyed doing. I specialize in CMS-based web development and
+        enjoy the challenge of empowering content editors to not really need me
+        anymore. I'm skilled at ramping up on any CMS but I've spent the most
+        time in the world of Contentful, Wordpress and most recently, Shopify.
+        I'm also skilled in the world of modern web development, specializing in
+        React.js.
+      </p>
+      <p>
+        I know it's a cliche to say that you thrive at the intersection of
+        something, but LinkedIn jargon aside, my diverse background really does
+        mean that I enjoy and thrive at solving problems that bridge the gap
+        between design, development, marketing, and user experience.
+      </p>
+      <p>
+        Outside of work I like to spend a lot of time outdoors, getting crafty
+        with some knitting or illustration, or playing a cozy video game. You
+        can see what craft project I'm working on over at my studio or see what
+        I'm up to in general now.
       </p>
     </div>
 
@@ -30,4 +52,4 @@ import AboutTabs from "../components/AboutTabs.tsx";
 
   <!-- ── Tabbed Detail Section ──────────────────────────── -->
   <AboutTabs client:load />
-</SubLayout>
+</BaseLayout>
