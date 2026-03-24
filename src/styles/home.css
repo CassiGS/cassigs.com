@@ -29,6 +29,50 @@ nav > ul {
     }
 }
 
+.what-i-do {
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-l) 0;
+}
+
+.what-i-do__label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: var(--font-size-05);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--space-m);
+    color: var(--color-dark);
+}
+
+.what-i-do__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--space-l);
+}
+
+.what-i-do__column h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-1);
+    font-weight: 600;
+    margin: 0 0 var(--space-xs);
+    color: var(--color-dark);
+}
+
+.what-i-do__column p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-05);
+    font-weight: 200;
+    line-height: 165%;
+    margin: 0;
+    color: var(--color-dark);
+}
+
+@media (max-width: 600px) {
+    .what-i-do__columns {
+        grid-template-columns: 1fr;
+    }
+}
 
 .project-container {
     display: flex;

@@ -65,8 +65,8 @@ const { items } = Astro.props;
   }
 
   .number-nav {
-    border: 1px solid var(--color-border);
-    background-color: var(--color-cream);
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-white);
     color: var(--color-dark);
 
     display: grid;
@@ -76,10 +76,11 @@ const { items } = Astro.props;
     font-weight: 300;
 
     & span {
-      padding: var(--space-s);
+      padding-top: var(--space-s);
+      padding-bottom: var(--space-s);
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: start;
       font-weight: 100;
       font-style: italic;
     }
@@ -87,7 +88,8 @@ const { items } = Astro.props;
 
   .number-nav__text,
   a.number-nav__text {
-    padding: var(--space-s);
+    padding-top: var(--space-s);
+    padding-bottom: var(--space-s);
     display: flex;
     align-items: center;
     color: var(--color-dark);
@@ -99,11 +101,9 @@ const { items } = Astro.props;
   }
 
   .number-nav__toc {
-    border-right: 1px solid var(--color-border);
-    border-left: 1px solid var(--color-border);
-    background-color: var(--color-cream);
+    background-color: var(--color-white: );
     color: var(--color-dark);
     font-size: var(--font-size-05);
-    padding: var(--space-m) 0 var(--space-m) calc(56px + var(--space-s));
+    padding: var(--space-s) 0 var(--space-s) 56px;
   }
 </style>
