@@ -4,12 +4,15 @@ import "../styles/about.css";
 
 import BaseLayout from "../layouts/BaseLayout.astro";
 import NumberNavList from "../components/NumberNavList.astro";
+import { Image } from "astro:assets";
+
+import profilePhoto from "../images/profile.jpeg";
 
 const navItems = [
   { text: "Education" },
-  { text: "Expririence" },
+  { text: "Experience" },
   { text: "Skills" },
-  { text: "Hobbies" },
+  // { text: "Hobbies" },
 ];
 ---
 
@@ -54,91 +57,193 @@ const navItems = [
     <div class="about-intro__photo">
       <!-- Replace src with your actual photo path -->
       <!-- <img src="/your-photo.jpg" alt="Cassi Gallagher-Shearer" /> -->
-      <div class="about-intro__photo--placeholder">photo</div>
+      <Image src={profilePhoto} alt="A photo of Cassi Gallagher-Shearer" />
     </div>
   </div>
 
   <!-- ── Tabbed Detail Section ──────────────────────────── -->
-  <NumberNavList items={navItems}
-    ><Fragment slot="toc-2"
-      ><ul class="jobs">
-        <li>
-          <span class="job-meta"
-            >Marketing Web Engineer — Submittable / Nov 2021–Nov 2025</span
-          >
-          Maintained and grew a Gatsby + Contentful marketing site, building dozens
-          of new page templates from Figma designs — including two homepage redesigns,
-          an ROI calculator, and a full blog migration of 300+ posts from WordPress.
-          Served as technical lead through a major site rebrand, coordinating the
-          migration and consolidation of 1,000+ pages across two properties.
-        </li>
+  <NumberNavList items={navItems}>
+    <Fragment slot="toc-1">
+      <div class="experience-section">
+        <div>
+          <h3>School</h3>
+          <ul>
+            <li>
+              2006 - 2010
+              <div>
+                <h4 class="job-meta">
+                  Bachelor of Arts | Visual Journalism - Western Washington
+                  University
+                </h4>
+                Activities: Online Editor: Western Front / Online Editor: Klipsun
+                Magazine / Web Development Certificate. Reporter: Western Front &
+                Klipsun Magazine. Part of: KVIK Broadcasting Club & NPPA: Western
+                Chapter. Visual Journalism Internship at Bellingham Alive!
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div>
+            <h3>Certificates</h3>
+            <ul>
+              <li>
+                2016
+                <div>
+                  <h4 class="job-meta">
+                    Full Stack Web Development | Dev Bootcamp
+                  </h4>
+                  At Dev Bootcamp we focused on Full Stack Web development, utilizing
+                  Ruby on Rails for back end development, as well as Javascript and
+                  basic front-end technologies such as HTML and CSS. We also covered
+                  modern software team workflows such as Agile development and pair
+                  programming.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="toc-2" class="experience-section">
+      <div class="experience-section">
+        <div>
+          <h3>Work</h3>
+          <ul class="jobs">
+            <li>
+              Nov 2021 – Nov 2025
+              <div>
+                <h4 class="job-meta">Marketing Web Engineer — Submittable</h4>
+                Maintained and grew a Gatsby + Contentful marketing site, building
+                dozens of new page templates from Figma designs — including two homepage
+                redesigns, an ROI calculator, and a full blog migration of 300+ posts
+                from WordPress. Served as technical lead through a major site rebrand,
+                coordinating the migration and consolidation of 1,000+ pages across
+                two properties.
+              </div>
+            </li>
+            <li>
+              Mar 2019 – Nov 2021
+              <div>
+                <h4 class="job-meta">
+                  Senior Engineer, Web Engineering — Slalom Build
+                </h4>
+                Transitioned to Slalom Build and consulted across six client projects
+                spanning React, WordPress, and Drupal. Managed a diverse portfolio
+                of projects including Wordpress template builds, React UI builds,
+                Drupal build and site maitanance, and more.
+              </div>
+            </li>
+            <li>
+              Nov 2017 – Mar 2019
+              <div>
+                <h4 class="job-meta">
+                  Engineer, Web & Marketing Engineering — Slalom Consulting
+                </h4>
+                Part of the Digital Experience Management practice, working across
+                12+ projects at the intersection of marketing and engineering. Embedded
+                with a healthcare client to build a Drupal-based blogging platform
+                focused on editor usability, and contributed to a provider research
+                portal for end users.
+              </div>
+            </li>
+            <li>
+              May 2014 – May 2017
+              <div>
+                <h4 class="job-meta">
+                  Production Artist — Sesame Communications
+                </h4>
+                Supported a web development and SEO team managing 30+ client cases
+                weekly — making HTML/CSS edits to live websites, conducting QA, designing
+                social assets, and writing internal documentation to streamline team
+                workflows.
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Volunteer</h3>
+          <ul>
+            <li>
+              Jun 2020
+              <div>
+                <h4 class="job-meta">
+                  Volunteer WordPress Developer — Tech For Campaigns
+                </h4>
+                Built out political campaign websites using a WordPress template,
+                contributing web skills toward down-ballot campaigns that don't always
+                have access to technical help.
+              </div>
+            </li>
 
-        <li>
-          <span class="job-meta"
-            >Senior Engineer, Web Engineering — Slalom Build / Mar 2019–Nov 2021</span
-          >
-          Consulted across six client projects spanning React, WordPress, and Drupal.
-          Built a data visualization frontend for an insurance client's cloud migration,
-          and spun up full WordPress sites for an internet media company's brand portfolio
-          — including a reusable site template to accelerate future builds.
-        </li>
+            <li>
+              Jan 2019 – Aug 2021
+              <div>
+                <h4 class="job-meta">
+                  Web Editor & Email Marketer — The World is Fun
+                </h4>
+                Managed the organization's Squarespace site — updating content, building
+                new pages, and keeping things tidy. Previously ran the volunteer newsletter
+                for five years: writing copy, managing the list, and leading a migration
+                to a modern responsive email platform.
+              </div>
+            </li>
 
-        <li>
-          <span class="job-meta"
-            >Engineer, Web & Marketing Engineering — Slalom Consulting / Nov
-            2017–Mar 2019</span
-          >
-          Part of the Digital Experience Management practice, working across 12+ projects
-          at the intersection of marketing and engineering. Embedded with a healthcare
-          client to build a Drupal-based blogging platform focused on editor usability,
-          and contributed to a provider research portal for end users.
-        </li>
-
-        <li>
-          <span class="job-meta"
-            >Production Artist — Sesame Communications / May 2014–May 2017</span
-          >
-          Supported a web development and SEO team managing 30+ client cases weekly
-          — making HTML/CSS edits to live websites, conducting QA, designing social
-          assets, and writing internal documentation to streamline team workflows.
-        </li>
-
-        <li>
-          <span class="job-meta">Earlier experience</span>
-          Full-stack development intern (React + Ruby on Rails), community management,
-          and technical support roles — where a 95%+ customer satisfaction rating
-          and a habit of explaining technical things in plain English came from.
-        </li>
-      </ul>
-
-      <ul class="jobs volunteer">
-        <li>
-          <span class="job-meta"
-            >Volunteer WordPress Developer — Tech For Campaigns / Jun 2020</span
-          >
-          Built out political campaign websites using a WordPress template, contributing
-          web skills toward down-ballot campaigns that don't always have access to
-          technical help.
-        </li>
-
-        <li>
-          <span class="job-meta"
-            >Web Editor & Email Marketer — The World is Fun / Jan 2019–Aug 2021</span
-          >
-          Managed the organization's Squarespace site — updating content, building
-          new pages, and keeping things tidy. Previously ran the volunteer newsletter
-          for five years: writing copy, managing the list, and leading a migration
-          to a modern responsive email platform.
-        </li>
-
-        <li>
-          <span class="job-meta"
-            >Volunteer — Bellingham Food Bank / Jan 2026–Present</span
-          >
-          Weekly grocery services support — stocking shelves and helping people find
-          what they need.
-        </li>
-      </ul>
-    </Fragment></NumberNavList
-  >
+            <li>
+              Jan 2026 – Present
+              <div>
+                <h4 class="job-meta">Volunteer — Bellingham Food Bank</h4>
+                Weekly grocery services support — stocking shelves and helping people
+                find what they need.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="toc-3">
+      <div class="skills-grid">
+        <div class="skills-grid__column">
+          <h3>Frontend</h3>
+          <ul class="skills-grid__list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Astro</li>
+            <li>Accessibility</li>
+          </ul>
+        </div>
+        <div class="skills-grid__column">
+          <h3>CMS</h3>
+          <ul class="skills-grid__list">
+            <li>Contentful</li>
+            <li>WordPress</li>
+            <li>Drupal</li>
+            <li>Headless architecture</li>
+          </ul>
+        </div>
+        <div class="skills-grid__column">
+          <h3>Tooling</h3>
+          <ul class="skills-grid__list">
+            <li>Git</li>
+            <li>Figma</li>
+            <li>Gatsby</li>
+            <li>Webpack</li>
+            <li>Netlify</li>
+          </ul>
+        </div>
+        <div class="skills-grid__column">
+          <h3>Other</h3>
+          <ul class="skills-grid__list">
+            <li>Core Web Vitals</li>
+            <li>SEO</li>
+            <li>Email development</li>
+            <li>Agile / Scrum</li>
+            <li>Technical writing</li>
+          </ul>
+        </div>
+      </div>
+    </Fragment>
+  </NumberNavList>
 </BaseLayout>

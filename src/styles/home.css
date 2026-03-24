@@ -1,5 +1,29 @@
 
 
+.contact-links {
+    display: flex;
+    gap: var(--space-s);
+}
+
+.contact-links__tag {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid var(--color-black);
+    padding: 0.3em 0.65em;
+    color: var(--color-black);
+    text-decoration: none;
+    transition: background-color ease-in-out 0.15s, color ease-in-out 0.15s;
+}
+
+.contact-links__tag:hover,
+.contact-links__tag:focus-visible {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
 .hero-home__textblock {
     display: flex;
     flex-direction: column;
@@ -17,7 +41,7 @@
 
 @keyframes slow-blink {
   from { opacity: 1.0; }
-  to { opacity: 0.5; }
+  to { opacity: 0.25; }
 }
 
 
@@ -49,7 +73,7 @@
 }
 
 .hero-home__status-label {
-    font-family: var(--font-body);
+    font-family: var(--font-heading);
     font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -58,9 +82,14 @@
 }
 
 .hero-home__status-text {
-    font-family: var(--font-body);
+    font-family: var(--font-heading);
     font-size: 0.875rem;
     font-weight: 300;
+    color: var(--color-white);
+    letter-spacing: .25px;
+}
+
+.hero-home__status-text a {
     color: var(--color-white);
 }
 

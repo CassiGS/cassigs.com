@@ -18,7 +18,7 @@ const featuredPosts = Object.values(postModules).filter(
 const navItems = [
   { text: "Selected Work" },
   { text: "About", link: "/about" },
-  { text: "Contact", link: "mailto:ccgall@gmail.com" },
+  { text: "Contact" },
 ];
 ---
 
@@ -31,7 +31,11 @@ const navItems = [
     </p>
     <div class="hero-home__status">
       <span class="hero-home__status-label">Current Status</span>
-      <span class="hero-home__status-text">Available for new projects</span>
+      <span class="hero-home__status-text"
+        >Available for new projects. Reach out on <a
+          href="https://www.linkedin.com/in/cassigs/">LinkedIn</a
+        > or by <a href="mailto:ccgall@gmail.com">email</a></span
+      >
     </div>
   </div>
   <section class="what-i-do" aria-labelledby="what-i-do-heading">
@@ -93,6 +97,18 @@ const navItems = [
       <a href="/projects" class="hero-home__all-projects">
         See all projects →
       </a> -->
+    </Fragment>
+    <Fragment slot="toc-3">
+      <div class="contact-links">
+        <a href="https://github.com/CassiGS" class="contact-links__tag"
+          >Github</a
+        >
+        <a
+          href="https://www.linkedin.com/in/cassigs/"
+          class="contact-links__tag">LinkedIn</a
+        >
+        <a href="mailto:ccgall@gmail.com" class="contact-links__tag">Email</a>
+      </div>
     </Fragment>
   </NumberNavList>
 </BaseLayout>
