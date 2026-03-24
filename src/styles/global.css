@@ -1,7 +1,7 @@
 :root {
   /* Fonts */
   --font-heading: "Space Grotesk", sans-serif;
-  --font-body: "JetBrains Mono", monospace;
+  --font-body: "Roboto", sans-serif;
 
   /* Typography */
   --scale-ratio: 1.25; 

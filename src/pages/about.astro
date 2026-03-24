@@ -13,28 +13,26 @@ const navItems = [
 ];
 ---
 
-<BaseLayout mainHeading="About" pageIndex="iii">
+<BaseLayout mainHeading="About" pageIndex="ii">
   <!-- ── Intro ──────────────────────────────────────────── -->
   <div class="about-intro">
     <div class="about-intro__bio">
       <p>
-        Hi I'm Cassi. I'm a frontend engineer focused on web development and web
-        engineering.
+        Hi, I'm Cassi. I'm a frontend engineer specializing in marketing
+        websites and CMS-driven development.
       </p>
       <p>
-        I started out as a Visual Journalism major focusing on photography and
-        design, and have worn many hats since then from customer service to
-        email development.
+        I originally started the journey as a Visual Journalism kid, always with
+        a camera in my hand. Somewhere along the way I added technical support
+        rep for casual video games, designer for dental facebook sites,
+        nonprofit email developer, and a brief stint signing people up for video
+        game user testing, to my many hats.
       </p>
-
       <p>
-        I eventually made the shift to web development as it's something I've
-        always enjoyed doing. I specialize in CMS-based web development and
-        enjoy the challenge of empowering content editors to not really need me
-        anymore. I'm skilled at ramping up on any CMS but I've spent the most
-        time in the world of Contentful, Wordpress and most recently, Shopify.
-        I'm also skilled in the world of modern web development, specializing in
-        React.js.
+        Now as a web developer whose spent 10+ years solving problems on the
+        web, my throughline has always been approaching every problem with
+        empathy and as a communication problem first, a technical one second. I
+        especially love working with mission-driven companies.
       </p>
       <p>
         I know it's a cliche to say that you thrive at the intersection of
@@ -43,11 +41,14 @@ const navItems = [
         between design, development, marketing, and user experience.
       </p>
       <p>
-        Outside of work I like to spend a lot of time outdoors, getting crafty
-        with some knitting or illustration, or playing a cozy video game. You
-        can see what craft project I'm working on over at my studio or see what
-        I'm up to in general now.
+        Outside of work I like to spend a lot of time outdoors (on a bike or on
+        a mountain, but weirdly - not both), getting crafty with some knitting
+        or illustration, or playing a cozy video game.
       </p>
+      <!-- <p>
+        You can see what craft project I'm working on over at my studio or see
+        what I'm up to in general now.
+      </p> -->
     </div>
 
     <div class="about-intro__photo">
@@ -58,5 +59,86 @@ const navItems = [
   </div>
 
   <!-- ── Tabbed Detail Section ──────────────────────────── -->
-  <NumberNavList items={navItems} />
+  <NumberNavList items={navItems}
+    ><Fragment slot="toc-2"
+      ><ul class="jobs">
+        <li>
+          <span class="job-meta"
+            >Marketing Web Engineer — Submittable / Nov 2021–Nov 2025</span
+          >
+          Maintained and grew a Gatsby + Contentful marketing site, building dozens
+          of new page templates from Figma designs — including two homepage redesigns,
+          an ROI calculator, and a full blog migration of 300+ posts from WordPress.
+          Served as technical lead through a major site rebrand, coordinating the
+          migration and consolidation of 1,000+ pages across two properties.
+        </li>
+
+        <li>
+          <span class="job-meta"
+            >Senior Engineer, Web Engineering — Slalom Build / Mar 2019–Nov 2021</span
+          >
+          Consulted across six client projects spanning React, WordPress, and Drupal.
+          Built a data visualization frontend for an insurance client's cloud migration,
+          and spun up full WordPress sites for an internet media company's brand portfolio
+          — including a reusable site template to accelerate future builds.
+        </li>
+
+        <li>
+          <span class="job-meta"
+            >Engineer, Web & Marketing Engineering — Slalom Consulting / Nov
+            2017–Mar 2019</span
+          >
+          Part of the Digital Experience Management practice, working across 12+ projects
+          at the intersection of marketing and engineering. Embedded with a healthcare
+          client to build a Drupal-based blogging platform focused on editor usability,
+          and contributed to a provider research portal for end users.
+        </li>
+
+        <li>
+          <span class="job-meta"
+            >Production Artist — Sesame Communications / May 2014–May 2017</span
+          >
+          Supported a web development and SEO team managing 30+ client cases weekly
+          — making HTML/CSS edits to live websites, conducting QA, designing social
+          assets, and writing internal documentation to streamline team workflows.
+        </li>
+
+        <li>
+          <span class="job-meta">Earlier experience</span>
+          Full-stack development intern (React + Ruby on Rails), community management,
+          and technical support roles — where a 95%+ customer satisfaction rating
+          and a habit of explaining technical things in plain English came from.
+        </li>
+      </ul>
+
+      <ul class="jobs volunteer">
+        <li>
+          <span class="job-meta"
+            >Volunteer WordPress Developer — Tech For Campaigns / Jun 2020</span
+          >
+          Built out political campaign websites using a WordPress template, contributing
+          web skills toward down-ballot campaigns that don't always have access to
+          technical help.
+        </li>
+
+        <li>
+          <span class="job-meta"
+            >Web Editor & Email Marketer — The World is Fun / Jan 2019–Aug 2021</span
+          >
+          Managed the organization's Squarespace site — updating content, building
+          new pages, and keeping things tidy. Previously ran the volunteer newsletter
+          for five years: writing copy, managing the list, and leading a migration
+          to a modern responsive email platform.
+        </li>
+
+        <li>
+          <span class="job-meta"
+            >Volunteer — Bellingham Food Bank / Jan 2026–Present</span
+          >
+          Weekly grocery services support — stocking shelves and helping people find
+          what they need.
+        </li>
+      </ul>
+    </Fragment></NumberNavList
+  >
 </BaseLayout>

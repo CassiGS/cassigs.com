@@ -4,6 +4,7 @@
     display: grid;
     grid-template-rows: auto auto;
     gap: var(--space-l);
+    margin-bottom: var(--space-l);
 }
 
 @media (min-width: 700px) {
@@ -16,7 +17,7 @@
 
 .about-intro__bio {
     color: var(--color-primary--dark);
-    font-weight: 200;
+    font-weight: 300;
     line-height: 165%;
 }
 

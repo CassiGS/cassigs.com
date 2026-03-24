@@ -16,7 +16,7 @@ const featuredPosts = Object.values(postModules).filter(
 );
 
 const navItems = [
-  { text: "Selected Work", link: "#" },
+  { text: "Selected Work" },
   { text: "About", link: "/about" },
   { text: "Contact", link: "mailto:ccgall@gmail.com" },
 ];
@@ -35,20 +35,19 @@ const navItems = [
     </div>
   </div>
   <section class="what-i-do" aria-labelledby="what-i-do-heading">
-    <h2 id="what-i-do-heading" class="what-i-do__label">What I do</h2>
     <div class="what-i-do__columns">
       <div class="what-i-do__column">
         <h3>Frontend Developement</h3>
         <p>
-          I build accessible interfaces. Whether I'm working with semantic HTML
-          and CSS, or component-based architecture using React, I'm skilled in
-          bridging the gap between Figma design and browser.
+          I build accessible interfaces. Whether I'm working with HTML/CSS, or
+          component-based architecture using React, I'm skilled in bridging the
+          gap between Figma design and browser.
         </p>
         <div class="what-i-do__tags">
-          <span class="what-i-do__tag">HTML</span>
-          <span class="what-i-do__tag">CSS</span>
-          <span class="what-i-do__tag">JavaScript</span>
-          <span class="what-i-do__tag">React</span>
+          <Tag>HTML</Tag>
+          <Tag>CSS</Tag>
+          <Tag>JavaScript</Tag>
+          <Tag>React</Tag>
         </div>
       </div>
       <div class="what-i-do__column">
@@ -56,13 +55,12 @@ const navItems = [
         <p>
           I'm skilled in working with CMS-based systems. From connecting
           headless systems to building back-end CMS expiriences your content
-          team will enjoy using. I know how CMS architecture works and whatever
-          system your team is using, I can get up to speed on quickly.
+          team will enjoy using.
         </p>
         <div class="what-i-do__tags">
-          <span class="what-i-do__tag">Contentful</span>
-          <span class="what-i-do__tag">WordPress</span>
-          <span class="what-i-do__tag">Headless</span>
+          <Tag>Contentful</Tag>
+          <Tag>WordPress</Tag>
+          <Tag>Headless</Tag>
         </div>
       </div>
       <div class="what-i-do__column">
@@ -72,9 +70,9 @@ const navItems = [
           problem solve lighthouse scores for better, faster websites
         </p>
         <div class="what-i-do__tags">
-          <span class="what-i-do__tag">Core Web Vitals</span>
-          <span class="what-i-do__tag">Lighthouse</span>
-          <span class="what-i-do__tag">Image optimization</span>
+          <Tag>Core Web Vitals</Tag>
+          <Tag>Lighthouse</Tag>
+          <Tag>Image optimization</Tag>
         </div>
       </div>
     </div>
