@@ -23,25 +23,39 @@ const navItems = [
 ---
 
 <BaseLayout mainHeading={`Cassi Gallagher-Shearer`} pageIndex="i">
-  <p class="hero-home__subhead">
-    I'm a web engineer, CMS wrangler, and CSS whisperer based in Bellingham, WA.
-    I enjoy solving problems on the web and I'll make friends with your
-    marketing team.
-  </p>
+  <div class="hero-home__intro">
+    <p class="hero-home__subhead">
+      I'm a Frontend Web Engineer based in Bellingham, WA. I build performant
+      websites for real humans, I genuinely enjoy writing CSS, and I'll make
+      friends with your marketing and content teams.
+    </p>
+    <div class="hero-home__status">
+      <span class="hero-home__status-label">Current Status</span>
+      <span class="hero-home__status-text">Available for new projects</span>
+    </div>
+  </div>
   <section class="what-i-do">
-    <span class="what-i-do__label">What I do</span>
     <div class="what-i-do__columns">
       <div class="what-i-do__column">
         <h3>Frontend Engineering</h3>
-        <p>Building fast, accessible interfaces with clean HTML, CSS, and JavaScript that work for real people on real devices.</p>
+        <p>
+          Building fast, accessible interfaces with clean HTML, CSS, and
+          JavaScript that work for real people on real devices.
+        </p>
       </div>
       <div class="what-i-do__column">
         <h3>CMS Integration</h3>
-        <p>Wiring up content systems so editors can actually use them — from headless APIs to structured content workflows.</p>
+        <p>
+          Wiring up content systems so editors can actually use them — from
+          headless APIs to structured content workflows.
+        </p>
       </div>
       <div class="what-i-do__column">
         <h3>Web Performance</h3>
-        <p>Diagnosing what's slow and fixing it. Core Web Vitals, asset optimisation, and keeping load times honest.</p>
+        <p>
+          Diagnosing what's slow and fixing it. Core Web Vitals, asset
+          optimisation, and keeping load times honest.
+        </p>
       </div>
     </div>
   </section>
