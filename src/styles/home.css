@@ -26,17 +26,16 @@
 
 .hero-home__status-label {
     font-family: var(--font-body);
-    font-size: 11px;
+    font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--color-white);
-    opacity: 0.75;
 }
 
 .hero-home__status-text {
     font-family: var(--font-body);
-    font-size: 13px;
+    font-size: 0.875rem;
     font-weight: 300;
     color: var(--color-white);
 }
@@ -77,7 +76,7 @@ nav > ul {
 .what-i-do__label {
     display: block;
     font-family: var(--font-body);
-    font-size: var(--font-size-05);
+    font-size: var(--font-size-1);
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -101,9 +100,9 @@ nav > ul {
 
 .what-i-do__column p {
     font-family: var(--font-body);
-    font-size: var(--font-size-05);
+    font-size: .8rem;
     font-weight: 200;
-    line-height: 165%;
+    line-height: 185%;
     margin: 0 0 var(--space-s);
     color: var(--color-dark);
 }
@@ -116,7 +115,7 @@ nav > ul {
 
 .what-i-do__tag {
     font-family: var(--font-body);
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.05em;

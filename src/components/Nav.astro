@@ -45,6 +45,11 @@ const links = [
     letter-spacing: 1px;
   }
 
+  .site-nav__logo:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
   .site-nav__links {
     display: flex;
     align-items: center;
@@ -63,11 +68,23 @@ const links = [
 
   .site-nav__link--active {
     color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .site-nav__link:not(.site-nav__link--contact):hover,
   .site-nav__link:not(.site-nav__link--contact):focus-visible {
     color: var(--color-accent);
+  }
+
+  .site-nav__link:not(.site-nav__link--contact):focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  .site-nav__link--contact:focus-visible {
+    outline: 2px solid var(--color-black);
+    outline-offset: 3px;
   }
 
   .site-nav__link--contact {

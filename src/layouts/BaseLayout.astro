@@ -23,9 +23,10 @@ const { pageTitle, mainHeading, pageIndex } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="paper-container">
       <Nav />
-      <main>
+      <main id="main-content">
         <h1>{mainHeading}</h1>
         <slot />
       </main>
