@@ -1,0 +1,119 @@
+---
+
+---
+
+<section class="about">
+  <div class="about__container">
+    <div class="about__header">
+      <span class="about__label">01 / About</span>
+    </div>
+    <div class="about__columns">
+      <div class="about__text">
+        <p>
+          I've spent the last ten years solving problems on the web. I've worn
+          many hats in my career — including some stints in design and
+          marketing.
+        </p>
+        <p>
+          As a marketing web developer, I know more than just code. I know the
+          <strong>types of problems your team is trying to solve.</strong>
+        </p>
+        <p>
+          From building compelling landing pages, to helping your team
+          self-publish with a CMS, to making sure your form captures every lead
+          — I'll help your team work faster. <em>No JIRA ticket required.</em>
+        </p>
+      </div>
+      <div class="about__stats">
+        <div class="about__stat">
+          <span class="about__stat-label">Stat</span>
+          <span class="about__stat-number">00</span>
+        </div>
+        <div class="about__stat">
+          <span class="about__stat-label">Stat</span>
+          <span class="about__stat-number">00</span>
+        </div>
+        <div class="about__stat">
+          <span class="about__stat-label">Stat</span>
+          <span class="about__stat-number">00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    width: 100%;
+  }
+
+  .about__container {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 0 5rem;
+  }
+
+  .about__header {
+    border-top: 2px solid currentColor;
+    padding-top: var(--space-s);
+    margin-bottom: var(--space-xl);
+  }
+
+  .about__label {
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .about__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+
+  .about__text p {
+    font-family: var(--font);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.7;
+    margin: 0 0 1rem 0;
+  }
+
+  .about__stats {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about__stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-s) 0;
+    border-top: 1px solid currentColor;
+  }
+
+  .about__stat:last-child {
+    border-bottom: 1px solid currentColor;
+  }
+
+  .about__stat-label {
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .about__stat-number {
+    font-family: var(--font);
+    font-size: clamp(1rem, 4vw, 2rem);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  @media (max-width: 768px) {
+    .about__columns {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
