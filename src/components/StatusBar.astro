@@ -1,0 +1,56 @@
+<div class="status__wrapper">
+  <span class="status__label">Current Status</span>
+  <span class="status__text">Available for new projects</span>
+</div>
+
+<style>
+  @keyframes slow-blink {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.25;
+    }
+  }
+
+  .status__wrapper:before {
+    display: flex;
+    content: "";
+    border-radius: 0.375rem;
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: var(--color-green);
+    animation-name: slow-blink;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    opacity: 1;
+  }
+
+  .status__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 0.35em;
+    border: 1px solid var(--color-black);
+    padding: 1rem;
+    flex-shrink: 0;
+    align-items: center;
+  }
+
+  .status__label {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .status__text {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+  }
+</style>

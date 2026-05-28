@@ -24,6 +24,7 @@
   --color-black: #000;
   --color-accent: #d4572a;
   --color-border: #d5cfc5;
+  --color-green: #2E7D54;
 
   /* Spacing */
   --space-xs: clamp(0.75rem, 0.6733rem + 0.3409vw, 0.9375rem);

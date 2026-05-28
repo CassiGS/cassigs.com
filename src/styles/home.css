@@ -39,60 +39,6 @@
     margin-bottom: var(--space-m);
 }
 
-@keyframes slow-blink {
-  from { opacity: 1.0; }
-  to { opacity: 0.25; }
-}
-
-
-.hero-home__status:before {
-    display: flex;
-    content: '';
-    border-radius: 0.375rem;
-    height: 0.5rem;
-    width: 0.5rem;
-    background-color: var(--color-white);
-    animation-name: slow-blink;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-duration: 2s;
-    animation-direction: alternate;
-    opacity: 1;
-}
-
-
-.hero-home__status {
-    display: flex;
-    flex-direction: row;
-    gap: 0.35em;
-    background-color: var(--color-accent);
-    padding: var(--space-s);
-    flex-shrink: 0;
-    align-items: center;
-    
-}
-
-.hero-home__status-label {
-    font-family: var(--font-heading);
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--color-white);
-}
-
-.hero-home__status-text {
-    font-family: var(--font-heading);
-    font-size: 0.875rem;
-    font-weight: 300;
-    color: var(--color-white);
-    letter-spacing: .25px;
-}
-
-.hero-home__status-text a {
-    color: var(--color-white);
-}
-
 @media (max-width: 600px) {
     .hero-home__intro {
         flex-direction: column;

@@ -7,6 +7,8 @@ const links = [
   { href: "/about", label: "About" },
   { href: "mailto:ccgall@gmail.com", label: "Contact", external: true },
 ];
+
+import StatusBar from "./StatusBar.astro";
 ---
 
 <header class="site-nav">
@@ -24,6 +26,7 @@ const links = [
       ))
     }
   </nav>
+  <StatusBar />
 </header>
 
 <style>
@@ -51,9 +54,15 @@ const links = [
   }
 
   .site-nav__links {
-    display: flex;
-    align-items: center;
-    gap: var(--space-l);
+    display: none;
+  }
+
+  @media (min-width: 900px) {
+    .site-nav__links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-l);
+    }
   }
 
   .site-nav__link {
