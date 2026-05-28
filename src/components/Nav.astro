@@ -12,31 +12,42 @@ import StatusBar from "./StatusBar.astro";
 ---
 
 <header class="site-nav">
-  <a href="/" class="site-nav__logo">CASSIGS WEB DEVELOPMENT</a>
+  <div class="site-nav__container">
+    <a href="/" class="site-nav__logo">CASSIGS WEB DEVELOPMENT</a>
 
-  <nav class="site-nav__links" aria-label="Main navigation">
-    {
-      links.map(({ href, label, external }) => (
-        <a
-          href={href}
-          class={`site-nav__link${external ? " site-nav__link--contact" : ""}${!external && (href === "/" ? currentPath === "/" : currentPath.startsWith(href)) ? " site-nav__link--active" : ""}`}
-        >
-          {label}
-        </a>
-      ))
-    }
-  </nav>
-  <StatusBar />
+    <nav class="site-nav__links" aria-label="Main navigation">
+      {
+        links.map(({ href, label, external }, index) => (
+          <div class="link-wrapper">
+            <span> 0{index + 1}</span>
+            <a
+              href={href}
+              class={`site-nav__link${external ? " site-nav__link--contact" : ""}${!external && (href === "/" ? currentPath === "/" : currentPath.startsWith(href)) ? " site-nav__link--active" : ""}`}
+            >
+              {label}
+            </a>
+          </div>
+        ))
+      }
+    </nav>
+    <StatusBar />
+  </div>
 </header>
 
 <style>
   .site-nav {
+    border-bottom: 2px solid var(--color-black);
+    padding: 1rem 0;
+    font-family: var(--font);
+  }
+
+  .site-nav__container {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--space-s) 0;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: var(--space-s);
   }
 
   .site-nav__logo {
@@ -61,51 +72,37 @@ import StatusBar from "./StatusBar.astro";
     .site-nav__links {
       display: flex;
       align-items: center;
-      gap: var(--space-l);
+      gap: 1rem;
     }
   }
 
-  .site-nav__link {
-    font-family: var(--font-body);
+  .link-wrapper {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .link-wrapper span {
+    font-family: var(--font);
     font-weight: 300;
-    font-size: 14px;
+    font-size: 16px;
+    color: var(--color-accent);
+  }
+  .site-nav__link {
+    font-family: var(--font);
+    font-weight: 300;
+    font-size: 16px;
     color: var(--color-black);
     text-decoration: none;
     text-transform: uppercase;
     transition: color ease-in-out 0.15s;
   }
 
+  .site-nav__link:hover {
+    color: var(--color-accent);
+  }
+
   .site-nav__link--active {
     color: var(--color-accent);
-    text-decoration: underline;
     text-underline-offset: 3px;
-  }
-
-  .site-nav__link:not(.site-nav__link--contact):hover,
-  .site-nav__link:not(.site-nav__link--contact):focus-visible {
-    color: var(--color-accent);
-  }
-
-  .site-nav__link:not(.site-nav__link--contact):focus-visible {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 3px;
-  }
-
-  .site-nav__link--contact:focus-visible {
-    outline: 2px solid var(--color-black);
-    outline-offset: 3px;
-  }
-
-  .site-nav__link--contact {
-    color: var(--color-white);
-    background-color: var(--color-accent);
-    padding: 0.4em 0.85em;
-    transition: background-color ease-in-out 0.15s;
-  }
-
-  .site-nav__link--contact:hover,
-  .site-nav__link--contact:focus-visible {
-    color: var(--color-white);
-    background-color: #b84724;
   }
 </style>

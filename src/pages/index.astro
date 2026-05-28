@@ -22,10 +22,13 @@ const navItems = [
 ];
 ---
 
+<BaseLayout />
+
+<!-- 
 <BaseLayout mainHeading={`Cassi Gallagher-Shearer`} pageIndex="i">
   <div class="hero-home__intro">
     <p class="hero-home__subhead">
-      Marketing Web Engineer for B2B SaaS companies.
+      I'm a Marketing Web Engineer for B2B SaaS companies.
     </p>
     <p>AKA your marketing team's best friend</p>
 
@@ -74,7 +77,7 @@ const navItems = [
     <NumberNavList items={navItems}>
       <Fragment slot="toc-1">
         <div>Coming Soon</div>
-        <!-- {featuredPosts.map((post) => (
+        {featuredPosts.map((post) => (
         <a href={post.url} class="project-container">
           {post.frontmatter.title}
           <div>
@@ -86,7 +89,7 @@ const navItems = [
       ))}
       <a href="/projects" class="hero-home__all-projects">
         See all projects →
-      </a> -->
+      </a>
       </Fragment>
       <Fragment slot="toc-3">
         <div class="contact-links">
@@ -102,4 +105,4 @@ const navItems = [
       </Fragment>
     </NumberNavList>
   </div>
-</BaseLayout>
+</BaseLayout> -->
