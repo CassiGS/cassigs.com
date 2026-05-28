@@ -1,36 +1,51 @@
 ---
+import Image from "astro/components/Image.astro";
 import SectionLayout from "../layouts/SectionLayout.astro";
+
+import Dog from "../images/office-dog.jpeg";
 ---
 
 <SectionLayout id="about" pageIndex={1} pageTitle="About">
   <div class="about__columns">
     <div class="about__text">
       <p>
-        I've spent the last ten years solving problems on the web. I've worn
-        many hats in my career — including some stints in design and marketing.
-      </p>
-      <p>
-        As a marketing web developer, I know more than just code. I know the
-        <strong>types of problems your team is trying to solve.</strong>
+        I've worn a lot of hats im my career. As a web developer (and former
+        designer and marketer), I do more than just code pretty websites. I know
+        the <strong>types of problems your team is trying to solve.</strong>
       </p>
       <p>
         From building compelling landing pages, to helping your team
-        self-publish with a CMS, to making sure your form captures every lead —
-        I'll help your team work faster. <em>No JIRA ticket required.</em>
+        self-publish with a CMS, to making sure your form captures every lead, I
+        can help your team work faster. <em>No JIRA ticket required.</em>
       </p>
     </div>
     <div class="about__stats">
       <div class="about__stat">
-        <span class="about__stat-label">Stat</span>
-        <span class="about__stat-number">00</span>
+        <span class="about__stat-label">Based In</span>
+        <span class="about__stat-number">Bellingham, WA</span>
       </div>
       <div class="about__stat">
-        <span class="about__stat-label">Stat</span>
-        <span class="about__stat-number">00</span>
+        <span class="about__stat-label">CMS Specialties</span>
+        <span class="about__stat-number">Contentful, Headless</span>
       </div>
       <div class="about__stat">
-        <span class="about__stat-label">Stat</span>
-        <span class="about__stat-number">00</span>
+        <span class="about__stat-label">Tech Stack</span>
+        <span class="about__stat-number">React, HTML, CSS</span>
+      </div>
+      <div class="about__stat">
+        <span class="about__stat-label">Pages Shipped</span>
+        <span class="about__stat-number">1000+</span>
+      </div>
+      <div class="about__stat">
+        <span class="about__stat-label">Years Wrangling the Web</span>
+        <span class="about__stat-number">10+</span>
+      </div>
+      <div class="about__stat">
+        <span class="about__stat-label">Office Mate</span>
+        <span class="about__stat-number dog">
+          Sleepy
+          <Image class="dog-tooltip" src={Dog} alt="Sleepy the office dog" />
+        </span>
       </div>
     </div>
   </div>
@@ -70,17 +85,42 @@ import SectionLayout from "../layouts/SectionLayout.astro";
   .about__stat-label {
     font-family: var(--font);
     font-size: 0.75rem;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
+    color: var(--color-accent);
   }
 
   .about__stat-number {
     font-family: var(--font);
-    font-size: clamp(1rem, 4vw, 2rem);
-    font-weight: 700;
+    font-size: 1rem;
     line-height: 1;
-    color: var(--color-accent);
+  }
+
+  .dog {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .dog:hover {
+    text-decoration: none;
+  }
+
+  .dog-tooltip {
+    position: absolute;
+    bottom: calc(100% + 0.75rem);
+    right: 0;
+    width: 200px;
+    height: auto;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease-in-out;
+  }
+
+  .dog:hover .dog-tooltip {
+    opacity: 1;
   }
 
   @media (max-width: 768px) {

@@ -49,6 +49,7 @@ import SectionLayout from "../layouts/SectionLayout.astro";
     gap: var(--space-m);
     padding: var(--space-m) 0;
     border-top: 1px solid currentColor;
+    background-color: transparent;
   }
 
   .case-studies__item:last-child {
@@ -65,11 +66,20 @@ import SectionLayout from "../layouts/SectionLayout.astro";
 
   .case-studies__link {
     font-family: var(--font);
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
-    font-weight: 700;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
     text-decoration: none;
     color: currentColor;
     transition: color 0.15s ease-in-out;
+    font-style: none;
+  }
+
+  .case-studies__item:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  :global(.case-studies__item:hover .case-studies__link) {
+    font-style: italic;
   }
 
   .case-studies__link:hover,

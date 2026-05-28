@@ -65,11 +65,19 @@ import SectionLayout from "../layouts/SectionLayout.astro";
 
   .fun__link {
     font-family: var(--font);
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
-    font-weight: 700;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
     text-decoration: none;
     color: currentColor;
     transition: color 0.15s ease-in-out;
+  }
+
+  .fun__item:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  :global(.fun__item:hover .fun__link) {
+    font-style: italic;
   }
 
   .fun__link:hover,
