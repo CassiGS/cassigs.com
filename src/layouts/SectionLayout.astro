@@ -1,0 +1,40 @@
+---
+const { id, pageIndex, pageTitle } = Astro.props;
+---
+
+<section class="section-wrapper" id={id}>
+  <div class="container">
+    <div class="header">
+      <span class="label">0{pageIndex} / {pageTitle}</span>
+    </div>
+    <slot />
+  </div>
+</section>
+
+<style>
+  .section-wrapper {
+    width: 100%;
+    scroll-margin-top: 5em;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 0 5rem;
+  }
+
+  .header {
+    border-top: 2px solid currentColor;
+    padding-top: var(--space-s);
+    margin-bottom: var(--space-xl);
+  }
+
+  .label {
+    font-family: var(--font);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+</style>

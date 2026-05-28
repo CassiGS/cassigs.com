@@ -1,36 +1,31 @@
 ---
-
+import SectionLayout from "../layouts/SectionLayout.astro";
 ---
 
-<section class="kind-words" id="kind-words">
-  <div class="kind-words__container">
-    <div class="kind-words__header">
-      <span class="kind-words__label">03 / Kind Words</span>
-    </div>
-    <div class="kind-words__grid">
-      <figure class="kind-words__card">
-        <blockquote class="kind-words__quote">
-          "Placeholder testimonial text. This is where a kind word from a happy
-          client or colleague will live. Something warm and specific goes here."
-        </blockquote>
-        <figcaption class="kind-words__attribution">
-          <span class="kind-words__name">Full Name</span>
-          <span class="kind-words__title">Job Title, Company</span>
-        </figcaption>
-      </figure>
-      <figure class="kind-words__card">
-        <blockquote class="kind-words__quote">
-          "Placeholder testimonial text. This is where a kind word from a happy
-          client or colleague will live. Something warm and specific goes here."
-        </blockquote>
-        <figcaption class="kind-words__attribution">
-          <span class="kind-words__name">Full Name</span>
-          <span class="kind-words__title">Job Title, Company</span>
-        </figcaption>
-      </figure>
-    </div>
+<SectionLayout id="kind-words" pageIndex={4} pageTitle="Kind Words">
+  <div class="kind-words__grid">
+    <figure class="kind-words__card">
+      <blockquote class="kind-words__quote">
+        "Placeholder testimonial text. This is where a kind word from a happy
+        client or colleague will live. Something warm and specific goes here."
+      </blockquote>
+      <figcaption class="kind-words__attribution">
+        <span class="kind-words__name">Full Name</span>
+        <span class="kind-words__title">Job Title, Company</span>
+      </figcaption>
+    </figure>
+    <figure class="kind-words__card">
+      <blockquote class="kind-words__quote">
+        "Placeholder testimonial text. This is where a kind word from a happy
+        client or colleague will live. Something warm and specific goes here."
+      </blockquote>
+      <figcaption class="kind-words__attribution">
+        <span class="kind-words__name">Full Name</span>
+        <span class="kind-words__title">Job Title, Company</span>
+      </figcaption>
+    </figure>
   </div>
-</section>
+</SectionLayout>
 
 <style>
   .kind-words {

@@ -1,19 +1,15 @@
 ---
+import SectionLayout from "../layouts/SectionLayout.astro";
 ---
 
-<section class="fun" id="fun">
-  <div class="fun__container">
-    <div class="fun__header">
-      <span class="fun__label">05 / Fun</span>
-    </div>
-    <ul class="fun__list">
-      <li class="fun__item">
-        <span class="fun__number">01</span>
-        <a href="#" class="fun__link">Now</a>
-      </li>
-    </ul>
-  </div>
-</section>
+<SectionLayout id="fun" pageIndex={6} pageTitle="Fun">
+  <ul class="fun__list">
+    <li class="fun__item">
+      <span class="fun__number">01</span>
+      <a href="#" class="fun__link">Now</a>
+    </li>
+  </ul>
+</SectionLayout>
 
 <style>
   .fun {

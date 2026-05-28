@@ -1,74 +1,42 @@
 ---
-
+import SectionLayout from "../layouts/SectionLayout.astro";
 ---
 
-<section class="about" id="about">
-  <div class="about__container">
-    <div class="about__header">
-      <span class="about__label">01 / About</span>
+<SectionLayout id="about" pageIndex={1} pageTitle="About">
+  <div class="about__columns">
+    <div class="about__text">
+      <p>
+        I've spent the last ten years solving problems on the web. I've worn
+        many hats in my career — including some stints in design and marketing.
+      </p>
+      <p>
+        As a marketing web developer, I know more than just code. I know the
+        <strong>types of problems your team is trying to solve.</strong>
+      </p>
+      <p>
+        From building compelling landing pages, to helping your team
+        self-publish with a CMS, to making sure your form captures every lead —
+        I'll help your team work faster. <em>No JIRA ticket required.</em>
+      </p>
     </div>
-    <div class="about__columns">
-      <div class="about__text">
-        <p>
-          I've spent the last ten years solving problems on the web. I've worn
-          many hats in my career — including some stints in design and
-          marketing.
-        </p>
-        <p>
-          As a marketing web developer, I know more than just code. I know the
-          <strong>types of problems your team is trying to solve.</strong>
-        </p>
-        <p>
-          From building compelling landing pages, to helping your team
-          self-publish with a CMS, to making sure your form captures every lead
-          — I'll help your team work faster. <em>No JIRA ticket required.</em>
-        </p>
+    <div class="about__stats">
+      <div class="about__stat">
+        <span class="about__stat-label">Stat</span>
+        <span class="about__stat-number">00</span>
       </div>
-      <div class="about__stats">
-        <div class="about__stat">
-          <span class="about__stat-label">Stat</span>
-          <span class="about__stat-number">00</span>
-        </div>
-        <div class="about__stat">
-          <span class="about__stat-label">Stat</span>
-          <span class="about__stat-number">00</span>
-        </div>
-        <div class="about__stat">
-          <span class="about__stat-label">Stat</span>
-          <span class="about__stat-number">00</span>
-        </div>
+      <div class="about__stat">
+        <span class="about__stat-label">Stat</span>
+        <span class="about__stat-number">00</span>
+      </div>
+      <div class="about__stat">
+        <span class="about__stat-label">Stat</span>
+        <span class="about__stat-number">00</span>
       </div>
     </div>
   </div>
-</section>
+</SectionLayout>
 
 <style>
-  .about {
-    width: 100%;
-    scroll-margin-top: 5em;
-  }
-
-  .about__container {
-    width: 90%;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 0 5rem;
-  }
-
-  .about__header {
-    border-top: 2px solid currentColor;
-    padding-top: var(--space-s);
-    margin-bottom: var(--space-xl);
-  }
-
-  .about__label {
-    font-family: var(--font);
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 500;
-  }
-
   .about__columns {
     display: grid;
     grid-template-columns: 1fr 1fr;

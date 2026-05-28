@@ -1,37 +1,32 @@
 ---
-
+import SectionLayout from "../layouts/SectionLayout.astro";
 ---
 
-<section class="services" id="services">
-  <div class="services__container">
-    <div class="services__header">
-      <span class="services__label">02 / Services</span>
-    </div>
-    <ul class="services__list">
-      <li class="services__item">
-        <span class="services__number">01</span>
-        <strong class="services__name">Service</strong>
-        <p class="services__text">
-          Service description placeholder text goes here.
-        </p>
-      </li>
-      <li class="services__item">
-        <span class="services__number">02</span>
-        <strong class="services__name">Service</strong>
-        <p class="services__text">
-          Service description placeholder text goes here.
-        </p>
-      </li>
-      <li class="services__item">
-        <span class="services__number">03</span>
-        <strong class="services__name">Service</strong>
-        <p class="services__text">
-          Service description placeholder text goes here.
-        </p>
-      </li>
-    </ul>
-  </div>
-</section>
+<SectionLayout id="services" pageIndex={2} pageTitle="Services">
+  <ul class="services__list">
+    <li class="services__item">
+      <span class="services__number">01</span>
+      <strong class="services__name">Service</strong>
+      <p class="services__text">
+        Service description placeholder text goes here.
+      </p>
+    </li>
+    <li class="services__item">
+      <span class="services__number">02</span>
+      <strong class="services__name">Service</strong>
+      <p class="services__text">
+        Service description placeholder text goes here.
+      </p>
+    </li>
+    <li class="services__item">
+      <span class="services__number">03</span>
+      <strong class="services__name">Service</strong>
+      <p class="services__text">
+        Service description placeholder text goes here.
+      </p>
+    </li>
+  </ul>
+</SectionLayout>
 
 <style>
   .services {

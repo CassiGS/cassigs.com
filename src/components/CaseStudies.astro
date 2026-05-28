@@ -1,19 +1,15 @@
 ---
+import SectionLayout from "../layouts/SectionLayout.astro";
 ---
 
-<section class="case-studies" id="case-studies">
-  <div class="case-studies__container">
-    <div class="case-studies__header">
-      <span class="case-studies__label">06 / Case Studies</span>
-    </div>
-    <ul class="case-studies__list">
-      <li class="case-studies__item">
-        <span class="case-studies__number">01</span>
-        <a href="#" class="case-studies__link">submittable.com</a>
-      </li>
-    </ul>
-  </div>
-</section>
+<SectionLayout id="case-studies" pageIndex={3} pageTitle="Case Studies">
+  <ul class="case-studies__list">
+    <li class="case-studies__item">
+      <span class="case-studies__number">01</span>
+      <a href="#" class="case-studies__link">submittable.com</a>
+    </li>
+  </ul>
+</SectionLayout>
 
 <style>
   .case-studies {
