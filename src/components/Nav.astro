@@ -2,10 +2,12 @@
 const currentPath = Astro.url.pathname;
 
 const links = [
-  { href: "/", label: "Home" },
-  // { href: "/projects", label: "Projects" },
-  { href: "/about", label: "About" },
-  { href: "mailto:ccgall@gmail.com", label: "Contact", external: true },
+  { href: "#about", label: "About" },
+  { href: "#services", label: "Services" },
+  { href: "#kind-words", label: "Kind Words" },
+  { href: "#contact", label: "Contact" },
+  { href: "#fun", label: "Fun" },
+  { href: "#case-studies", label: "Case Studies" },
 ];
 
 import StatusBar from "./StatusBar.astro";
@@ -17,13 +19,10 @@ import StatusBar from "./StatusBar.astro";
 
     <nav class="site-nav__links" aria-label="Main navigation">
       {
-        links.map(({ href, label, external }, index) => (
+        links.map(({ href, label }, index) => (
           <div class="link-wrapper">
-            <span> 0{index + 1}</span>
-            <a
-              href={href}
-              class={`site-nav__link${external ? " site-nav__link--contact" : ""}${!external && (href === "/" ? currentPath === "/" : currentPath.startsWith(href)) ? " site-nav__link--active" : ""}`}
-            >
+            <span>0{index + 1}</span>
+            <a href={href} class="site-nav__link">
               {label}
             </a>
           </div>
@@ -39,6 +38,10 @@ import StatusBar from "./StatusBar.astro";
     border-bottom: 2px solid var(--color-black);
     padding: 1rem 0;
     font-family: var(--font);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-cream);
   }
 
   .site-nav__container {
@@ -84,13 +87,13 @@ import StatusBar from "./StatusBar.astro";
   .link-wrapper span {
     font-family: var(--font);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--color-accent);
   }
   .site-nav__link {
     font-family: var(--font);
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--color-black);
     text-decoration: none;
     text-transform: uppercase;
