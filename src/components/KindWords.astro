@@ -1,0 +1,108 @@
+---
+
+---
+
+<section class="kind-words">
+  <div class="kind-words__container">
+    <div class="kind-words__header">
+      <span class="kind-words__label">03 / Kind Words</span>
+    </div>
+    <div class="kind-words__grid">
+      <figure class="kind-words__card">
+        <blockquote class="kind-words__quote">
+          "Placeholder testimonial text. This is where a kind word from a happy
+          client or colleague will live. Something warm and specific goes here."
+        </blockquote>
+        <figcaption class="kind-words__attribution">
+          <span class="kind-words__name">Full Name</span>
+          <span class="kind-words__title">Job Title, Company</span>
+        </figcaption>
+      </figure>
+      <figure class="kind-words__card">
+        <blockquote class="kind-words__quote">
+          "Placeholder testimonial text. This is where a kind word from a happy
+          client or colleague will live. Something warm and specific goes here."
+        </blockquote>
+        <figcaption class="kind-words__attribution">
+          <span class="kind-words__name">Full Name</span>
+          <span class="kind-words__title">Job Title, Company</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<style>
+  .kind-words {
+    width: 100%;
+  }
+
+  .kind-words__container {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 0 5rem;
+  }
+
+  .kind-words__header {
+    border-top: 2px solid currentColor;
+    padding-top: var(--space-s);
+    margin-bottom: var(--space-xl);
+  }
+
+  .kind-words__label {
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .kind-words__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-m);
+  }
+
+  .kind-words__card {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-xl);
+  }
+
+  .kind-words__quote {
+    font-family: var(--font);
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    font-style: italic;
+  }
+
+  .kind-words__attribution {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .kind-words__name {
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .kind-words__title {
+    font-family: var(--font);
+    font-size: 0.875rem;
+    font-weight: 400;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 768px) {
+    .kind-words__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

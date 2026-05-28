@@ -1,0 +1,83 @@
+---
+---
+
+<section class="case-studies">
+  <div class="case-studies__container">
+    <div class="case-studies__header">
+      <span class="case-studies__label">06 / Case Studies</span>
+    </div>
+    <ul class="case-studies__list">
+      <li class="case-studies__item">
+        <span class="case-studies__number">01</span>
+        <a href="#" class="case-studies__link">submittable.com</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .case-studies {
+    width: 100%;
+  }
+
+  .case-studies__container {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 0 5rem;
+  }
+
+  .case-studies__header {
+    border-top: 2px solid currentColor;
+    padding-top: var(--space-s);
+    margin-bottom: var(--space-xl);
+  }
+
+  .case-studies__label {
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .case-studies__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .case-studies__item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-m);
+    padding: var(--space-m) 0;
+    border-top: 1px solid currentColor;
+  }
+
+  .case-studies__item:last-child {
+    border-bottom: 1px solid currentColor;
+  }
+
+  .case-studies__number {
+    font-family: var(--font);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    letter-spacing: 0.08em;
+  }
+
+  .case-studies__link {
+    font-family: var(--font);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 700;
+    text-decoration: none;
+    color: currentColor;
+    transition: color 0.15s ease-in-out;
+  }
+
+  .case-studies__link:hover,
+  .case-studies__link:focus-visible {
+    color: var(--color-accent);
+  }
+</style>

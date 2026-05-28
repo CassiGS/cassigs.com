@@ -1,0 +1,83 @@
+---
+---
+
+<section class="fun">
+  <div class="fun__container">
+    <div class="fun__header">
+      <span class="fun__label">05 / Fun</span>
+    </div>
+    <ul class="fun__list">
+      <li class="fun__item">
+        <span class="fun__number">01</span>
+        <a href="#" class="fun__link">Now</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .fun {
+    width: 100%;
+  }
+
+  .fun__container {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 0 5rem;
+  }
+
+  .fun__header {
+    border-top: 2px solid currentColor;
+    padding-top: var(--space-s);
+    margin-bottom: var(--space-xl);
+  }
+
+  .fun__label {
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .fun__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .fun__item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-m);
+    padding: var(--space-m) 0;
+    border-top: 1px solid currentColor;
+  }
+
+  .fun__item:last-child {
+    border-bottom: 1px solid currentColor;
+  }
+
+  .fun__number {
+    font-family: var(--font);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    letter-spacing: 0.08em;
+  }
+
+  .fun__link {
+    font-family: var(--font);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 700;
+    text-decoration: none;
+    color: currentColor;
+    transition: color 0.15s ease-in-out;
+  }
+
+  .fun__link:hover,
+  .fun__link:focus-visible {
+    color: var(--color-accent);
+  }
+</style>
