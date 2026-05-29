@@ -1,93 +1,67 @@
 ---
 import SectionLayout from "../layouts/SectionLayout.astro";
+import Button from "./Button.astro";
 ---
 
-<SectionLayout id="contact" pageIndex={5} pageTitle="Contact">
+<SectionLayout id="contact" pageIndex={5} pageTitle="Contact" noContainer>
   <div class="contact__columns">
-    <p class="contact__blurb">
-      Placeholder text. This is where a short, warm intro to getting in touch
-      will live. Something inviting and to the point.
-    </p>
+    <p class="contact__blurb">Ready to talk about a project? Let's chat!</p>
     <div class="contact__actions">
-      <a href="mailto:ccgall@gmail.com" class="contact__button"
-        >Reach out by Email</a
-      >
-      <a href="https://www.linkedin.com/in/cassigs/" class="contact__button"
-        >Connect on LinkedIn</a
-      >
+      <Button
+        link="mailto:ccgall@gmail.com"
+        linkText="Reach out by email"
+        type="external"
+      />
+      <Button
+        linkText="Connect on LinkedIn"
+        link="https://www.linkedin.com/in/cassigs/"
+        type="external"
+      />
     </div>
-  </div>
-</SectionLayout>
 
-<style>
-  .contact {
-    width: 100%;
-  }
+    <style>
+      .contact {
+        width: 100%;
+      }
 
-  .contact__container {
-    width: 90%;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 0 5rem;
-  }
+      .contact__header {
+        border-top: 2px solid currentColor;
+        padding-top: var(--space-s);
+        margin-bottom: var(--space-xl);
+      }
 
-  .contact__header {
-    border-top: 2px solid currentColor;
-    padding-top: var(--space-s);
-    margin-bottom: var(--space-xl);
-  }
+      .contact__label {
+        font-family: var(--font);
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
 
-  .contact__label {
-    font-family: var(--font);
-    font-size: 1rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
+      .contact__columns {
+        display: grid;
+        gap: 2rem;
+        align-items: center;
+      }
 
-  .contact__columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xl);
-    align-items: center;
-  }
+      .contact__blurb {
+        font-family: var(--font);
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        line-height: 1.7;
+        margin: 0;
+      }
 
-  .contact__blurb {
-    font-family: var(--font);
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    line-height: 1.7;
-    margin: 0;
-  }
+      .contact__actions {
+        display: flex;
+        flex-direction: row;
+        gap: var(--space-s);
+      }
 
-  .contact__actions {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-s);
-  }
-
-  .contact__button {
-    font-family: var(--font);
-    font-size: 1rem;
-    font-weight: 500;
-    text-decoration: none;
-    color: currentColor;
-    border: 1px solid currentColor;
-    padding: var(--space-m) var(--space-l);
-    text-align: center;
-    transition:
-      background-color 0.15s ease-in-out,
-      color 0.15s ease-in-out;
-  }
-
-  .contact__button:hover,
-  .contact__button:focus-visible {
-    background-color: var(--color-dark);
-    color: var(--color-white);
-  }
-
-  @media (max-width: 768px) {
-    .contact__columns {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
+      @media (max-width: 768px) {
+        .contact__columns {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </div></SectionLayout
+>

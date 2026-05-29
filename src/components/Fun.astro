@@ -2,7 +2,7 @@
 import SectionLayout from "../layouts/SectionLayout.astro";
 ---
 
-<SectionLayout id="fun" pageIndex={6} pageTitle="Fun">
+<SectionLayout id="fun" pageIndex={6} pageTitle="Fun" noContainer>
   <ul class="fun__list">
     <li class="fun__item">
       <span class="fun__number">01</span>
@@ -14,13 +14,6 @@ import SectionLayout from "../layouts/SectionLayout.astro";
 <style>
   .fun {
     width: 100%;
-  }
-
-  .fun__container {
-    width: 90%;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 0 5rem;
   }
 
   .fun__header {

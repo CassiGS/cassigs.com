@@ -6,7 +6,7 @@ import SectionLayout from "../layouts/SectionLayout.astro";
   <ul class="services__list">
     <li class="services__item">
       <span class="services__number">01</span>
-      <strong class="services__name">Web Audits</strong>
+      <h3 class="services__name">Web Audits</h3>
       <p class="services__text">
         I can help lighthouse web scores and run CMS audits. If you need help
         evaluating something on your marketing website, I can help guide you.
@@ -14,15 +14,15 @@ import SectionLayout from "../layouts/SectionLayout.astro";
     </li>
     <li class="services__item">
       <span class="services__number">02</span>
-      <strong class="services__name">Page Builds</strong>
+      <h3 class="services__name">Page Builds</h3>
       <p class="services__text">
-        From landing pages, specialty pages like ROI calculator, to pricing
+        From landing pages, specialty pages like ROI calculators, to pricing
         pages. I can take your Figma/design files and help bring them to life.
       </p>
     </li>
     <li class="services__item">
       <span class="services__number">03</span>
-      <strong class="services__name">Fractional/Retainer Web Engineer</strong>
+      <h3 class="services__name">Fractional/Retainer Web Engineer</h3>
       <p class="services__text">
         Need something more on-going? I can sit with your marketing team as an
         honorary teammate and help you with ongoing projects and campaigns. I
@@ -74,6 +74,10 @@ import SectionLayout from "../layouts/SectionLayout.astro";
     flex-direction: column;
     gap: var(--space-s);
     padding: var(--space-l);
+  }
+
+  .services__item h3 {
+    margin: 0;
   }
 
   .services__item:not(:last-child) {

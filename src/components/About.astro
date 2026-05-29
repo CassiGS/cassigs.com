@@ -1,23 +1,36 @@
 ---
 import Image from "astro/components/Image.astro";
 import SectionLayout from "../layouts/SectionLayout.astro";
+import Button from "./Button.astro";
 
 import Dog from "../images/office-dog.jpeg";
 ---
 
 <SectionLayout id="about" pageIndex={1} pageTitle="About">
   <div class="about__columns">
-    <div class="about__text">
-      <p>
-        I've worn a lot of hats im my career. As a web developer (and former
-        designer and marketer), I do more than just code pretty websites. I know
-        the <strong>types of problems your team is trying to solve.</strong>
-      </p>
-      <p>
-        From building compelling landing pages, to helping your team
-        self-publish with a CMS, to making sure your form captures every lead, I
-        can help your team work faster. <em>No JIRA ticket required.</em>
-      </p>
+    <div class="about__column-text">
+      <div class="about__text">
+        <p>
+          I've worn a lot of hats im my career. As a web developer (and former
+          designer and marketer), I do more than just code pretty websites. I
+          know the <strong
+            >types of problems your team is trying to solve.</strong
+          >
+        </p>
+        <p>
+          From building compelling landing pages, to helping your team
+          self-publish with a CMS, to making sure your form captures every lead,
+          I can help your team work faster. <em>No JIRA ticket required.</em>
+        </p>
+      </div>
+      <div class="about__buttons">
+        <Button link="#" linkText="Download Resume" type="download" />
+        <Button
+          link="https://www.linkedin.com/in/cassigs/"
+          linkText="Connect on LinkedIn"
+          type="external"
+        />
+      </div>
     </div>
     <div class="about__stats">
       <div class="about__stat">
@@ -104,11 +117,13 @@ import Dog from "../images/office-dog.jpeg";
   .dog {
     position: relative;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: underline dotted;
+    color: var(--color-accent);
   }
 
   .dog:hover {
     text-decoration: none;
+    font-style: italic;
   }
 
   .dog-tooltip {
@@ -131,5 +146,16 @@ import Dog from "../images/office-dog.jpeg";
     .about__columns {
       grid-template-columns: 1fr;
     }
+  }
+
+  .about__column-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .about__buttons {
+    display: flex;
+    gap: 2rem;
   }
 </style>
