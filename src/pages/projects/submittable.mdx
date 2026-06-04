@@ -11,6 +11,7 @@ tenure: "2021-2025"
 ---
 
 import ProjectSection from "../../components/ProjectSection.astro";
+import StatComponent from "../../components/StatComponent.astro";
 
 <ProjectSection pageIndex={2} pageTitle="About">
     ## Overview
@@ -19,6 +20,8 @@ import ProjectSection from "../../components/ProjectSection.astro";
 </ProjectSection>
 
 <ProjectSection pageIndex={3} pageTitle="The Work">
+
+
 ## What I Built
 ### Self-publish templates
 I built end-to-end publishing solutions for content editors. Starting from Figma designs, I developed the front-end templates, modeled the content structure in Contentful, and connected the two through a reusable Gatsby/React build. Each template shipped with written documentation and a Loom walkthrough so editors could publish independently without filing a ticket.
@@ -34,6 +37,14 @@ Impact: Specialty pages that helped increase traffic and visibilty to the site.
 I owned the day-to-day technical health of the site: monitoring Core Web Vitals and Lighthouse scores, maintaining the codebase, and managing CI/CD pipeline issues through Netlify, and additional website specific work marketing teams shouldn't have to try and figure out. 
 
 Impact: Diligent lighthouse score monitoring, no site downtime during my tenure. 
+<StatComponent
+  stat1="7"
+  label1="Self-publish templates"
+  stat2="5+"
+  label2="Specialty builds"
+  stat3="0"
+  label3="Site Downtime"
+/>
 </ProjectSection>
 
 <ProjectSection pageIndex={4} pageTitle="Project Highlight">
@@ -61,4 +72,13 @@ We consolidated three of the four sites into one — migrating content from HubS
 
 ### Phase 3 — Rebrand
 Rather than bottleneck everything through our designer, we worked together strategically: he produced full designs for two key pages (home and product template) plus a mini design system covering fonts, colors, and sizing. I applied that system site-wide, using the component architecture I'd already built, with him signing off on major pages rather than hand-holding every change. A model for how a lean team can move fast without cutting corners.
+
+<StatComponent
+  stat1="1000+"
+  label1="Pages consolidated & redirected"
+  stat2="4"
+  label2="Sites consolidated"
+  stat3="10+"
+  label3="Templates/Pages Rebranded"
+/>
 </ProjectSection>
