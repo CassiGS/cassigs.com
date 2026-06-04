@@ -5,10 +5,15 @@ import CalloutList from "./CalloutList.astro";
 
 import Dog from "../images/office-dog.jpeg";
 
-const { pageIndex, pageTitle, listItems } = Astro.props;
+const { pageIndex, pageTitle, listItems, noContainer } = Astro.props;
 ---
 
-<SectionLayout id="about" pageIndex={pageIndex} pageTitle={pageTitle}>
+<SectionLayout
+  id="about"
+  pageIndex={pageIndex}
+  pageTitle={pageTitle}
+  noContainer={noContainer}
+>
   <div class="about__columns">
     <slot />
     <CalloutList listItems={listItems}>

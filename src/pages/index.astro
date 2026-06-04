@@ -14,10 +14,10 @@ import Button from "../components/Button.astro";
 
 const projectModules = import.meta.glob<{
   frontmatter: { title: string };
-}>("./projects/*.md", { eager: true });
+}>("./projects/*.mdx", { eager: true });
 
 const caseStudies = Object.entries(projectModules).map(([path, mod]) => {
-  const slug = path.split("/").pop()?.replace(".md", "") ?? "";
+  const slug = path.split("/").pop()?.replace(".mdx", "") ?? "";
   return {
     title: mod.frontmatter.title,
     slug: `/projects/${slug}`,
