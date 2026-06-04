@@ -1,0 +1,60 @@
+---
+const { id, pageIndex, pageTitle, noContainer } = Astro.props;
+
+import "../styles/project-post.css";
+---
+
+<section class="section-wrapper" id={id}>
+  <div class:list={[{ container: !noContainer }]}>
+    <div class="section-content">
+      <h2 class="header">
+        <span class="label">0{pageIndex} / {pageTitle}</span>
+      </h2>
+      <div class="content">
+        <slot />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-wrapper {
+    width: 100%;
+    scroll-margin-top: 5em;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 0 5rem;
+    border-top: 2px solid currentColor;
+  }
+
+  .header {
+    padding-top: var(--space-s);
+    margin-bottom: var(--space-xl);
+  }
+
+  .label {
+    font-family: var(--font);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+
+  .section-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  @media (min-width: 900px) {
+    .section-content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .content {
+    padding-top: var(--space-s);
+  }
+</style>

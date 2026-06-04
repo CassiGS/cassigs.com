@@ -10,6 +10,55 @@ teamSize: "~10"
 tenure: "2021-2025"
 ---
 
-## Overview
+import ProjectSection from "../../components/ProjectSection.astro";
 
-My role at Submittable was to help the marketing team work faster, and more efficiently. I sat directly on the marketing team and operated at the intersection of technical ownership and cross-functional collaboration: building the infrastructure the team needed to move independently, while keeping the site healthy, performant, and accessible.
+<ProjectSection pageIndex={2} pageTitle="About">
+    ## Overview
+
+    My role at Submittable was to help the marketing team work faster, and more efficiently. I sat directly on the marketing team and operated at the intersection of technical ownership and cross-functional collaboration: building the infrastructure the team needed to move independently, while keeping the site healthy, performant, and accessible.
+</ProjectSection>
+
+<ProjectSection pageIndex={3} pageTitle="The Work">
+## What I Built
+### Self-publish templates
+I built end-to-end publishing solutions for content editors. Starting from Figma designs, I developed the front-end templates, modeled the content structure in Contentful, and connected the two through a reusable Gatsby/React build. Each template shipped with written documentation and a Loom walkthrough so editors could publish independently without filing a ticket.
+
+Impact: I expanded the team's self-publish capability from 4 templates across two platforms to 7 on a single, unified system — covering digital guides, product pages, podcasts, customer stories, events, webinars, and blog posts.
+
+### Specialty builds
+Beyond the template system, I led the development of 5+ high-impact standalone projects: an [ROI calculator](https://www.submittable.com/quiz), targeted campaign pages including an [AI for Good landing page](https://www.submittable.com/ai), and a [content hub](https://www.submittable.com/resources/corporate-social-responsibility) — each scoped and built to serve specific marketing objectives.
+
+Impact: Specialty pages that helped increase traffic and visibilty to the site. 
+
+### Site health & maintenance
+I owned the day-to-day technical health of the site: monitoring Core Web Vitals and Lighthouse scores, maintaining the codebase, and managing CI/CD pipeline issues through Netlify, and additional website specific work marketing teams shouldn't have to try and figure out. 
+
+Impact: Diligent lighthouse score monitoring, no site downtime during my tenure. 
+</ProjectSection>
+
+<ProjectSection pageIndex={4} pageTitle="Project Highlight">
+## Anybody want a cookie?
+The team needed a compliant cookie consent banner. After researching and presenting options to leadership, we hit a familiar wall: no budget for a new tool. So we built one.
+
+### V1
+Working with our demand gen team, we explored using HubSpot — our existing marketing platform — to handle consent. We embedded HubSpot's cookie policy and let it manage its own cookies. It worked, partially. HubSpot only controlled its own cookies, and we had additional third-party tools firing through GTM that it couldn't touch.
+
+### V2
+I devised a hybrid solution: keep the HubSpot consent banner, but layer in a custom cookie listener that detected when a user accepted or declined. That event then triggered or suppressed GTM tags accordingly. It wasn't the cleanest architecture, but it worked — and it shipped with no new tools and no additional headcount.
+
+> Takeaway: this is a textbook build-vs-buy moment. The in-house solution worked, but the trial-and-error cost more time than a dedicated tool would have. I'd make the case for the tool earlier next time.
+</ProjectSection>
+
+<ProjectSection pageIndex={5} pageTitle="Project Highlight">
+## 1 Engineer Vs. 4 Sites: Fight!
+Submittable acquired two additional brands, leaving us with 4 sites across 4 CMSs: Contentful, HubSpot CMS, Webflow, and WordPress. A rebrand and consolidation project was greenlit for 2025, and I took technical lead.
+
+### Phase 1 — Blog migration
+The blog had lived on a subdomain for years. I partnered with our Head of Organic Growth to audit all existing posts, retire low-value content, build a new blog template (front-end and Contentful), write a migration script to bring over 100+ posts, and set up redirects to preserve link equity. It was a clean win before the bigger lift began.
+
+### Phase 2 — Site consolidation
+We consolidated three of the four sites into one — migrating content from HubSpot CMS and Webflow through the same audit-migrate-redirect process, at larger scale.
+
+### Phase 3 — Rebrand
+Rather than bottleneck everything through our designer, we worked together strategically: he produced full designs for two key pages (home and product template) plus a mini design system covering fonts, colors, and sizing. I applied that system site-wide, using the component architecture I'd already built, with him signing off on major pages rather than hand-holding every change. A model for how a lean team can move fast without cutting corners.
+</ProjectSection>

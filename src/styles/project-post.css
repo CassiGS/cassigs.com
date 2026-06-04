@@ -48,8 +48,36 @@
 
 /* ── Prose content ─────────────────────────────────────── */
 
-.project-post-content {
-    padding-bottom: var(--space-3xl);
+.content {
+    font-family: var(--font);
+    font-size: clamp(.75rem, 2vw, 1rem);
+}
+
+.content h2 {
+    font-size: clamp(2rem, 2vw, 2.5rem);
+    margin: var(--space-l) 0 var(--space-s);
+}
+
+.content h3 {
+    color: var(--color-accent);
+}
+
+.content p {
+    line-height: 200%;
+}
+
+/* Blockquote */
+.content blockquote {
+    border-left: 3px solid var(--color-accent);
+    padding: 14px 18px;
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.03);
+    font-size: .9rem;
+    line-height: 1.65;
+}
+
+.content blockquote p {
+    margin: 0;
 }
 
 /* Headings — prose scale, no border overrides from global */
@@ -58,19 +86,6 @@
     border: none;
     padding: 0;
     margin: var(--space-xl) 0 var(--space-s);
-}
-
-.project-post-content h2 {
-    font-size: var(--font-size-2);
-    margin: var(--space-l) 0 var(--space-s);
-    padding-bottom: var(--space-xs);
-    border-bottom: 1px solid color-mix(in srgb, var(--color-primary--dark) 20%, transparent);
-}
-
-.project-post-content h3 {
-    font-size: var(--font-size-1);
-    font-weight: 700;
-    margin: var(--space-l) 0 var(--space-xs);
 }
 
 .project-post-content h4,
@@ -140,19 +155,7 @@
     margin: var(--space-xs) 0 0;
 }
 
-/* Blockquote */
-.project-post-content blockquote {
-    margin: var(--space-l) 0;
-    padding: var(--space-m) var(--space-l);
-    border-left: 3px solid var(--color-secondary--dark);
-    background-color: color-mix(in srgb, var(--color-secondary--dark) 5%, transparent);
-    font-style: italic;
-    font-weight: 200;
-}
 
-.project-post-content blockquote p {
-    margin: 0;
-}
 
 /* Inline code */
 .project-post-content code {
