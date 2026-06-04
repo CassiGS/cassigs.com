@@ -3,6 +3,7 @@ const { header } = Astro.props;
 ---
 
 <section class="hero">
+  <a href="/#case-studies">← Back to Case Studies</a>
   <h1 class="hero__heading">{header}</h1>
 </section>
 
@@ -21,5 +22,17 @@ const { header } = Astro.props;
     line-height: 1.05;
     margin: 0 0 var(--space-m);
     text-transform: uppercase;
+  }
+
+  .hero a {
+    color: var(--color-accent);
+    font-family: var(--font);
+    text-decoration: none;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .hero a:hover {
+    text-decoration: underline;
   }
 </style>
