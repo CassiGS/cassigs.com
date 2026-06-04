@@ -1,10 +1,11 @@
 ---
-const currentPath = Astro.url.pathname;
+import StatusBar from "./StatusBar.astro";
 ---
 
 <header class="site-nav">
   <div class="site-nav__container">
     <a href="/" class="site-nav__logo">CASSIGS WEB DEVELOPMENT</a>
+    <StatusBar />
   </div>
 </header>
 

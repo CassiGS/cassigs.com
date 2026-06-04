@@ -10,8 +10,7 @@ import KindWords from "../components/KindWords.astro";
 import Contact from "../components/Contact.astro";
 import Fun from "../components/Fun.astro";
 import CaseStudies from "../components/CaseStudies.astro";
-import Tag from "../components/Tag.astro";
-import NumberNavList from "../components/NumberNavList.astro";
+import Button from "../components/Button.astro";
 
 const projectModules = import.meta.glob<{
   frontmatter: { title: string };
@@ -25,16 +24,49 @@ const caseStudies = Object.entries(projectModules).map(([path, mod]) => {
   };
 });
 
-const navItems = [
-  { text: "Selected Work" },
-  { text: "About", link: "/about" },
-  { text: "Contact" },
+const stats = [
+  { label: "Based In", calloutText: "Bellingham, WA" },
+  { label: "Org Specialties", calloutText: "B2B, SaaS" },
+  { label: "CMS Specialties", calloutText: "Contentful, Headless" },
+  { label: "Tech Stack", calloutText: "React, HTML, CSS" },
+  { label: "Pages Shipped", calloutText: "1000+" },
+  { label: "Years Wrangling the Web", calloutText: "10+" },
+  { label: "Office Mate", calloutText: "Sleepy", additionalEl: true },
 ];
 ---
 
 <BaseLayout>
   <Hero />
-  <About />
+  <About pageIndex={1} pageTitle="About" listItems={stats}>
+    <div class="about__column-text">
+      <div>
+        <p>
+          I've worn a lot of hats in my career. As a web developer (and former
+          designer and marketer), I do more than just code pretty websites. I
+          know the <strong
+            >types of problems your team is trying to solve.</strong
+          >
+        </p>
+        <p>
+          From building compelling landing pages, to helping your team
+          self-publish with a CMS, to making sure your form captures every lead,
+          I can help your team work faster. <em>No JIRA ticket required.</em>
+        </p>
+      </div>
+      <div class="about__buttons">
+        <Button
+          link="/CGS_Resume2026.pdf"
+          linkText="Download Resume"
+          type="download"
+        />
+        <Button
+          link="https://www.linkedin.com/in/cassigs/"
+          linkText="Connect on LinkedIn"
+          type="external"
+        />
+      </div>
+    </div>
+  </About>
   <Services />
   <CaseStudies caseStudies={caseStudies} />
   <KindWords />
@@ -57,5 +89,15 @@ const navItems = [
       grid-template-columns: 1fr 1fr;
       gap: 5rem;
     }
+  }
+  .about__buttons {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .about__column-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 </style>

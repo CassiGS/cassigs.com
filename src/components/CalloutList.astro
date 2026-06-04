@@ -1,0 +1,96 @@
+---
+interface ListItem {
+  label: string;
+  calloutText: string;
+  additionalEl?: boolean;
+}
+
+interface Props {
+  listItems: ListItem[];
+}
+
+const { listItems } = Astro.props;
+---
+
+<div class="callout-list">
+  {
+    listItems.map((item) => (
+      <div class="callout-list__item">
+        <span class="callout-list__label">{item.label}</span>
+        <span
+          class={
+            item.additionalEl
+              ? "callout-list__callout callout-list__callout--extra"
+              : "callout-list__callout"
+          }
+        >
+          {item.calloutText}
+          {item.additionalEl && <slot name="additionalEl" />}
+        </span>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .callout-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .callout-list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-s) 0;
+    border-top: 1px solid currentColor;
+  }
+
+  .callout-list__item:last-child {
+    border-bottom: 1px solid currentColor;
+  }
+
+  .callout-list__label {
+    font-family: var(--font);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+  }
+
+  .callout-list__callout {
+    font-family: var(--font);
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .callout-list__callout--extra {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline dotted;
+    color: var(--color-accent);
+  }
+
+  .callout-list__callout--extra:hover {
+    text-decoration: none;
+    font-style: italic;
+  }
+
+  /* Slotted content crosses component boundary — :global() required */
+  :global(.dog-tooltip) {
+    position: absolute;
+    bottom: calc(100% + 0.75rem);
+    right: 0;
+    width: 200px;
+    height: auto;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease-in-out;
+  }
+
+  :global(.callout-list__callout--extra:hover .dog-tooltip) {
+    opacity: 1;
+  }
+</style>

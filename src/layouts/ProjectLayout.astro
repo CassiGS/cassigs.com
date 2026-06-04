@@ -3,8 +3,17 @@ import "../styles/global.css";
 
 import InnerNav from "../components/InnerNav.astro";
 import Footer from "../components/Footer.astro";
+import About from "../components/About.astro";
 
 const { frontmatter } = Astro.props;
+
+const projectMetaInfo = [
+  { label: "Role", calloutText: frontmatter.role },
+  { label: "Industry", calloutText: frontmatter.industry },
+  { label: "Tech Stack", calloutText: frontmatter.stack },
+  { label: "Team Size", calloutText: frontmatter.teamSize },
+  { label: "Tenure", calloutText: frontmatter.tenure },
+];
 ---
 
 <html lang="en">
@@ -26,6 +35,10 @@ const { frontmatter } = Astro.props;
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <InnerNav />
     <main id="main-content">
+      <h1>{frontmatter.pageTitle}</h1>
+      <About pageIndex={1} pageTitle="At a Glance" listItems={projectMetaInfo}>
+        {frontmatter.atAGlance}
+      </About>
       <slot />
     </main>
     <Footer />

@@ -1,74 +1,24 @@
 ---
 import Image from "astro/components/Image.astro";
 import SectionLayout from "../layouts/SectionLayout.astro";
-import Button from "./Button.astro";
+import CalloutList from "./CalloutList.astro";
 
 import Dog from "../images/office-dog.jpeg";
+
+const { pageIndex, pageTitle, listItems } = Astro.props;
 ---
 
-<SectionLayout id="about" pageIndex={1} pageTitle="About">
+<SectionLayout id="about" pageIndex={pageIndex} pageTitle={pageTitle}>
   <div class="about__columns">
-    <div class="about__column-text">
-      <div class="about__text">
-        <p>
-          I've worn a lot of hats in my career. As a web developer (and former
-          designer and marketer), I do more than just code pretty websites. I
-          know the <strong
-            >types of problems your team is trying to solve.</strong
-          >
-        </p>
-        <p>
-          From building compelling landing pages, to helping your team
-          self-publish with a CMS, to making sure your form captures every lead,
-          I can help your team work faster. <em>No JIRA ticket required.</em>
-        </p>
-      </div>
-      <div class="about__buttons">
-        <Button
-          link="/CGS_Resume2026.pdf"
-          linkText="Download Resume"
-          type="download"
-        />
-        <Button
-          link="https://www.linkedin.com/in/cassigs/"
-          linkText="Connect on LinkedIn"
-          type="external"
-        />
-      </div>
-    </div>
-    <div class="about__stats">
-      <div class="about__stat">
-        <span class="about__stat-label">Based In</span>
-        <span class="about__stat-number">Bellingham, WA</span>
-      </div>
-      <div class="about__stat">
-        <span class="about__stat-label">Org Specialties</span>
-        <span class="about__stat-number">B2B, SaaS</span>
-      </div>
-      <div class="about__stat">
-        <span class="about__stat-label">CMS Specialties</span>
-        <span class="about__stat-number">Contentful, Headless</span>
-      </div>
-      <div class="about__stat">
-        <span class="about__stat-label">Tech Stack</span>
-        <span class="about__stat-number">React, HTML, CSS</span>
-      </div>
-      <div class="about__stat">
-        <span class="about__stat-label">Pages Shipped</span>
-        <span class="about__stat-number">1000+</span>
-      </div>
-      <div class="about__stat">
-        <span class="about__stat-label">Years Wrangling the Web</span>
-        <span class="about__stat-number">10+</span>
-      </div>
-      <div class="about__stat">
-        <span class="about__stat-label">Office Mate</span>
-        <span class="about__stat-number dog">
-          Sleepy
-          <Image class="dog-tooltip" src={Dog} alt="Sleepy the office dog" />
-        </span>
-      </div>
-    </div>
+    <slot />
+    <CalloutList listItems={listItems}>
+      <Image
+        slot="additionalEl"
+        class="dog-tooltip"
+        src={Dog}
+        alt="Sleepy the office dog"
+      />
+    </CalloutList>
   </div>
 </SectionLayout>
 
@@ -79,87 +29,16 @@ import Dog from "../images/office-dog.jpeg";
     gap: 5rem;
   }
 
-  .about__text p {
+  .about__columns {
     font-family: var(--font);
     font-size: clamp(1rem, 1.5vw, 1.25rem);
     line-height: 1.7;
     margin: 0 0 1rem 0;
   }
 
-  .about__stats {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .about__stat {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--space-s) 0;
-    border-top: 1px solid currentColor;
-  }
-
-  .about__stat:last-child {
-    border-bottom: 1px solid currentColor;
-  }
-
-  .about__stat-label {
-    font-family: var(--font);
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--color-accent);
-  }
-
-  .about__stat-number {
-    font-family: var(--font);
-    font-size: 1rem;
-    line-height: 1;
-  }
-
-  .dog {
-    position: relative;
-    cursor: pointer;
-    text-decoration: underline dotted;
-    color: var(--color-accent);
-  }
-
-  .dog:hover {
-    text-decoration: none;
-    font-style: italic;
-  }
-
-  .dog-tooltip {
-    position: absolute;
-    bottom: calc(100% + 0.75rem);
-    right: 0;
-    width: 200px;
-    height: auto;
-    border-radius: 4px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.15s ease-in-out;
-  }
-
-  .dog:hover .dog-tooltip {
-    opacity: 1;
-  }
-
   @media (max-width: 768px) {
     .about__columns {
       grid-template-columns: 1fr;
     }
-  }
-
-  .about__column-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .about__buttons {
-    display: flex;
-    gap: 2rem;
   }
 </style>
