@@ -1,13 +1,27 @@
 ---
 import SectionLayout from "../layouts/SectionLayout.astro";
+
+interface Props {
+  caseStudies: { title: string; slug: string }[];
+}
+
+const { caseStudies } = Astro.props;
 ---
 
 <SectionLayout id="case-studies" pageIndex={3} pageTitle="Case Studies">
   <ul class="case-studies__list">
-    <li class="case-studies__item">
-      <span class="case-studies__number">01</span>
-      <a href="#" class="case-studies__link">submittable.com</a>
-    </li>
+    {
+      caseStudies.map((study, i) => (
+        <a href={study.slug} class="case-studies__link">
+          <li class="case-studies__item">
+            <span class="case-studies__number">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            {study.title}
+          </li>
+        </a>
+      ))
+    }
   </ul>
 </SectionLayout>
 

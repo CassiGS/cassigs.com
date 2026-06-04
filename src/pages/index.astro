@@ -13,14 +13,17 @@ import CaseStudies from "../components/CaseStudies.astro";
 import Tag from "../components/Tag.astro";
 import NumberNavList from "../components/NumberNavList.astro";
 
-const postModules = import.meta.glob<{
-  frontmatter: { title: string; tags?: string[]; featured?: boolean };
-  url: string;
-}>("./projects/*.md", { eager: true });
+const projectModules = import.meta.glob<{
+  frontmatter: { title: string };
+}>("../projects/*.md", { eager: true });
 
-const featuredPosts = Object.values(postModules).filter(
-  (p) => p.frontmatter.featured === true,
-);
+const caseStudies = Object.entries(projectModules).map(([path, mod]) => {
+  const slug = path.split("/").pop()?.replace(".md", "") ?? "";
+  return {
+    title: mod.frontmatter.title,
+    slug: `/projects/${slug}`,
+  };
+});
 
 const navItems = [
   { text: "Selected Work" },
@@ -33,7 +36,7 @@ const navItems = [
   <Hero />
   <About />
   <Services />
-  <CaseStudies />
+  <CaseStudies caseStudies={caseStudies} />
   <KindWords />
   <div class="home__more-group">
     <Contact />
