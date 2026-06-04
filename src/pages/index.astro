@@ -15,7 +15,7 @@ import NumberNavList from "../components/NumberNavList.astro";
 
 const projectModules = import.meta.glob<{
   frontmatter: { title: string };
-}>("../projects/*.md", { eager: true });
+}>("./projects/*.md", { eager: true });
 
 const caseStudies = Object.entries(projectModules).map(([path, mod]) => {
   const slug = path.split("/").pop()?.replace(".md", "") ?? "";

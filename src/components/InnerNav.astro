@@ -1,0 +1,86 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-nav">
+  <div class="site-nav__container">
+    <a href="/" class="site-nav__logo">CASSIGS WEB DEVELOPMENT</a>
+  </div>
+</header>
+
+<style>
+  .site-nav {
+    border-bottom: 2px solid var(--color-black);
+    padding: 1rem 0;
+    font-family: var(--font);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-cream);
+  }
+
+  .site-nav__container {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-nav__logo {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-black);
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  .site-nav__logo:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  .site-nav__links {
+    display: none;
+  }
+
+  @media (min-width: 900px) {
+    .site-nav__links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  .link-wrapper {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .link-wrapper span {
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color-accent);
+  }
+  .site-nav__link {
+    font-family: var(--font);
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--color-black);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color ease-in-out 0.15s;
+  }
+
+  .site-nav__link:hover {
+    color: var(--color-accent);
+  }
+
+  .site-nav__link--active {
+    color: var(--color-accent);
+    text-underline-offset: 3px;
+  }
+</style>
