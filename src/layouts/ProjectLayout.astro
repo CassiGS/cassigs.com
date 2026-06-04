@@ -4,6 +4,7 @@ import "../styles/global.css";
 import InnerNav from "../components/InnerNav.astro";
 import Footer from "../components/Footer.astro";
 import About from "../components/About.astro";
+import ProjectHero from "../components/ProjectHero.astro";
 
 const { frontmatter } = Astro.props;
 
@@ -35,7 +36,7 @@ const projectMetaInfo = [
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <InnerNav />
     <main id="main-content">
-      <h1>{frontmatter.pageTitle}</h1>
+      <ProjectHero header={frontmatter.pageTitle} />
       <About pageIndex={1} pageTitle="At a Glance" listItems={projectMetaInfo}>
         {frontmatter.atAGlance}
       </About>
