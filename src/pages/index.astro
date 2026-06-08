@@ -26,9 +26,9 @@ const caseStudies = Object.entries(projectModules).map(([path, mod]) => {
 
 const stats = [
   { label: "Based In", calloutText: "Bellingham, WA" },
-  { label: "Org Specialties", calloutText: "B2B, SaaS" },
+  { label: "Org Specialties", calloutText: "B2B, SaaS, Agency" },
   { label: "CMS Specialties", calloutText: "Contentful, Headless" },
-  { label: "Tech Stack", calloutText: "React, HTML, CSS" },
+  { label: "Tech Stack", calloutText: "React, HTML, CSS, Astro" },
   { label: "Pages Shipped", calloutText: "1000+" },
   { label: "Years Wrangling the Web", calloutText: "10+" },
   { label: "Office Mate", calloutText: "Sleepy", additionalEl: true },
@@ -41,16 +41,28 @@ const stats = [
     <div class="about__column-text">
       <div>
         <p>
-          I've worn a lot of hats in my career. As a web developer (and former
-          designer and marketer), I do more than just code pretty websites. I
-          know the <strong
-            >types of problems your team is trying to solve.</strong
-          >
+          I've worn a lot of hats in my career. As a frontend developer who came
+          up through visual journalism, design, and marketing, I can go beyond
+          technical implementation: I know the types of problems your team is
+          trying to solve.
+        </p>
+
+        <p>
+          <strong>For marketing and communications teams:</strong> I've sat directly
+          on this side of the house. Whether it's a landing page that actually converts,
+          a CMS your team can use without filing a ticket, or a form that stops losing
+          leads. I know what "we need this by end of quarter" actually means.
         </p>
         <p>
-          From building compelling landing pages, to helping your team
-          self-publish with a CMS, to making sure your form captures every lead,
-          I can help your team work faster. <em>No JIRA ticket required.</em>
+          <strong>For agencies:</strong> I plug into existing projects without slowing
+          your team down. I can ramp up on a codebase, work within your process, and
+          interface directly with clients when needed. I can act as an extension of
+          your team, not a dependency.
+        </p>
+        <p>
+          <strong>For nonprofits and mission-driven organizations:</strong> I understand
+          that storytelling is key, and that your team needs a site that is easy to
+          use. I can help build solutions for non-technical team members to use easily.
         </p>
       </div>
       <div class="about__buttons">
@@ -99,5 +111,9 @@ const stats = [
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .about__column-text p {
+    margin: 0 0 2rem 0;
   }
 </style>

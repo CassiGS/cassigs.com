@@ -1,0 +1,152 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import NowHero from "../components/NowHero.astro";
+
+const entries = await Astro.glob("./now/*.md");
+const sorted = entries.sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).getTime() -
+    new Date(a.frontmatter.date).getTime(),
+);
+---
+
+<BaseLayout>
+  <NowHero />
+  <section class="timeline-section">
+    <div class="timeline-container">
+      <div class="timeline">
+        {
+          sorted.map(({ frontmatter, Content }) => (
+            <div class="timeline-entry">
+              <div class="timeline-marker">
+                <div class="timeline-dot" />
+              </div>
+              <div class="timeline-content">
+                <h2 class="timeline-date">{frontmatter.dateTitle}</h2>
+                <div class="timeline-body">
+                  <Content />
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .timeline-section {
+    width: 100%;
+  }
+
+  .timeline-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-xl) 0 var(--space-3xl);
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 0.45rem;
+    top: 0.5rem;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--color-border);
+  }
+
+  .timeline-entry {
+    position: relative;
+    display: flex;
+    gap: var(--space-m);
+    margin-bottom: var(--space-xl);
+  }
+
+  .timeline-entry:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: -2rem;
+    top: 0.35rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 1rem;
+  }
+
+  .timeline-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--color-accent);
+    background-color: var(--color-cream);
+    flex-shrink: 0;
+  }
+
+  .timeline-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .timeline-date {
+    font-family: var(--font);
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    margin: 0;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .timeline-body {
+    font-family: var(--font);
+    line-height: 1.7;
+  }
+
+  .timeline-body :global(h2) {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-weight: 700;
+
+    color: var(--color-dark);
+  }
+
+  .timeline-body :global(h3) {
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    font-weight: 600;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .timeline-body :global(ul) {
+    margin: 0 0 var(--space-s);
+    padding-left: var(--space-m);
+  }
+
+  .timeline-body :global(li) {
+    margin-bottom: 0.25rem;
+  }
+
+  .timeline-body :global(p) {
+    margin: 0 0 var(--space-s);
+  }
+
+  .timeline-body :global(a) {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .timeline-body :global(a:hover) {
+    text-decoration: none;
+  }
+</style>

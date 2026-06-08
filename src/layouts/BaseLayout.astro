@@ -2,9 +2,10 @@
 import "../styles/global.css";
 
 import Nav from "../components/Nav.astro";
+import InnerNav from "../components/InnerNav.astro";
 import Footer from "../components/Footer.astro";
 
-const { pageTitle, mainHeading, pageIndex } = Astro.props;
+const { pageTitle, innerPage, pageIndex } = Astro.props;
 ---
 
 <html lang="en">
@@ -24,7 +25,7 @@ const { pageTitle, mainHeading, pageIndex } = Astro.props;
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <Nav />
+    {innerPage ? <InnerNav /> : <Nav />}
     <main id="main-content">
       <!-- <h1>{mainHeading}</h1> -->
       <slot />
