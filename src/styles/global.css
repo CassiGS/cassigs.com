@@ -88,3 +88,19 @@ h4 {
     font-size: var(--font-size-1);
     font-family: var(--font-heading);
 }
+
+main.inner-layout {
+    padding: 5rem 0 0;
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+    main.inner-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+
+    }
+}

@@ -1,11 +1,10 @@
 ---
 import "../styles/global.css";
 
-import Nav from "../components/Nav.astro";
 import InnerNav from "../components/InnerNav.astro";
 import Footer from "../components/Footer.astro";
 
-const { pageTitle, innerPage, pageIndex } = Astro.props;
+const { pageTitle, pageIndex } = Astro.props;
 ---
 
 <html lang="en">
@@ -25,8 +24,8 @@ const { pageTitle, innerPage, pageIndex } = Astro.props;
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    {innerPage ? <InnerNav /> : <Nav />}
-    <main id="main-content">
+    <InnerNav />
+    <main id="main-content" class="inner-layout">
       <slot />
     </main>
     <Footer pageIndex={pageIndex} />

@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+
+import InnerLayout from "../layouts/InnerLayout.astro";
+import InnerHero from "../components/InnerHero.astro";
+import Button from "../components/Button.astro";
+
+import officePhoto from "../images/the-studio.jpeg";
+---
+
+<InnerLayout innerPage>
+  <InnerHero pageTitle="The Studio">
+    As someone who spends entirely too much time on the internet and at a
+    computer all day, I like to flex my design thinking brain in more analogue
+    ways. Namely: with an illustration and craft practice. My studio sits next
+    to my computer desk and offers a chance to paint, illustrate, and play with
+    yarn. Check out what I'm up to over there.
+    <div class="about__buttons">
+      <Button
+        linkText="Instagram"
+        link="https://www.instagram.com/cassigs_studio/"
+        type="external"
+      />
+      <Button
+        linkText="Website"
+        link="https://studio.cassigs.com/"
+        type="external"
+      />
+    </div>
+  </InnerHero>
+  <section>
+    <div class="studio-container">
+      <Image src={officePhoto} alt="A photo of my craft desk" />
+    </div>
+  </section>
+</InnerLayout>
+
+<style>
+  .section {
+    width: 100%;
+  }
+
+  .studio-container img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+  }
+  .about__buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+</style>

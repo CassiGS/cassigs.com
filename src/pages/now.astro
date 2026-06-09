@@ -1,6 +1,6 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import NowHero from "../components/NowHero.astro";
+import InnerLayout from "../layouts/InnerLayout.astro";
+import InnerHero from "../components/InnerHero.astro";
 
 const entries = await Astro.glob("./now/*.md");
 const sorted = entries.sort(
@@ -10,8 +10,16 @@ const sorted = entries.sort(
 );
 ---
 
-<BaseLayout>
-  <NowHero />
+<InnerLayout>
+  <InnerHero pageTitle="Now">
+    This page was born entirely from my enjoyment of reading other people's <a
+      href="https://nownownow.com/about">now pages</a
+    >, <a href="https://kottke.org/tag/media%20diet">media digests</a>, and <a
+      href="https://austinkleon.substack.com/p/pizza-night-movie-logbooks"
+      >movie logbooks</a
+    >. This is a collection of things I'm working on and doing right now in work
+    and life.
+  </InnerHero>
   <section class="timeline-section">
     <div class="timeline-container">
       <div class="timeline">
@@ -33,7 +41,7 @@ const sorted = entries.sort(
       </div>
     </div>
   </section>
-</BaseLayout>
+</InnerLayout>
 
 <style>
   .timeline-section {
