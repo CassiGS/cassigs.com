@@ -14,10 +14,13 @@ date: 2026-06-01T00:00:00Z
 
 - Continuing: [Andor](https://www.imdb.com/title/tt9253284/)
 - [Running Point](https://www.imdb.com/title/tt14879018/) - my friend introduced me to this one and I'm enjoying it from the pure Parks and Rec/Office cameos alone.
+- Movie: [Backrooms](https://www.imdb.com/title/tt26657236/) - Very visually cool, very weird, made me feel sliiiighly old that they're calling this a new genre of "analogue horror" - but loved it none the less
+- Movie [I Love Boosters](https://www.imdb.com/title/tt30827810/?ref_=fn_t_1) - Very visually cool, very weird (I'm sensing a theme here) and a wild ride. I loved it.
 
 ### Playing
 
-- Continuing: [Sandwich Caravan](https://store.steampowered.com/app/1582650/Caravan_SandWitch/)
+- Finished: [Caravan SandWitch](https://store.steampowered.com/app/1582650/Caravan_SandWitch/) - Loved this one so much
+- [Dave the Diver](https://store.steampowered.com/app/1868140/DAVE_THE_DIVER/) - this one has been on my to play list for a while, and I'm glad I finally picked it up.
 
 ### Making
 

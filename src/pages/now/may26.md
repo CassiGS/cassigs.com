@@ -16,7 +16,7 @@ date: 2026-05-01T00:00:00Z
 
 ### Playing
 
-- [Sandwich Caravan](https://store.steampowered.com/app/1582650/Caravan_SandWitch/) - A cute game with a big message that makes me believe I could drive a big truck.
+- [Caravan SandWitch](https://store.steampowered.com/app/1582650/Caravan_SandWitch/) - A cute game with a big message that makes me believe I could drive a big truck.
 
 ### Making
 
