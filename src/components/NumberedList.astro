@@ -1,0 +1,77 @@
+---
+const { list } = Astro.props;
+
+interface Props {
+  list: {
+    slug: string;
+    title: string;
+  }[];
+}
+
+---
+
+<ul>
+  {list.map((item, index) => (
+    <li>
+      <a href={item.slug}>
+        <span>{String(index + 1).padStart(2, "0")}</span>
+        <div class="link__text">{item.title}</div>
+      </a>
+    </li>
+  ))}
+</ul>
+
+
+<style>
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    border-top: 1px solid var(--color-black);
+  }
+
+  li:last-child {
+    border-bottom: 1px solid var(--color-black);
+  }
+
+  a {
+    width: 100%;
+    height: 100%;
+    padding: var(--space-m) 0;
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-s);
+    text-decoration: none;
+    align-items: center;
+    color: var(--color-black);
+    backgrounc-color: transparent;
+    transition: all 0.5s ease-in-out;
+  }
+
+  span {
+    font-family: var(--font);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    letter-spacing: 0.08em;
+    transition: all 0.5s ease-in-out;
+  }
+
+  a:hover {
+    color: var(--color-white);
+    background-color: var(--color-green);
+  }
+
+  a:hover span {
+    color: var(--color-green);
+  }
+
+  .link__text {
+    font-family: var(--font);
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+  }
+s
+</style>

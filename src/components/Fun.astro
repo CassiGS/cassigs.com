@@ -1,9 +1,16 @@
 ---
 import SectionLayout from "../layouts/SectionLayout.astro";
+import NumberedList from "./NumberedList.astro";
+
+const funList = [
+  { title: "Now", slug: "/now" },
+  { title: "Studio", slug: "/studio" },
+];
 ---
 
 <SectionLayout id="fun" pageIndex={6} pageTitle="Fun" noContainer>
-  <ul class="fun__list">
+  <NumberedList list={funList} />
+  <!-- <ul class="fun__list">
     <li class="fun__item">
       <span class="fun__number">01</span>
       <a href="/now" class="fun__link">Now</a>
@@ -12,7 +19,7 @@ import SectionLayout from "../layouts/SectionLayout.astro";
       <span class="fun__number">02</span>
       <a href="/studio" class="fun__link">The Studio</a>
     </li>
-  </ul>
+  </ul> -->
 </SectionLayout>
 
 <style>
@@ -32,53 +39,5 @@ import SectionLayout from "../layouts/SectionLayout.astro";
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-  }
-
-  .fun__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .fun__item {
-    display: flex;
-    align-items: center;
-    gap: var(--space-m);
-    padding: var(--space-m) 0;
-    border-top: 1px solid currentColor;
-  }
-
-  .fun__item:last-child {
-    border-bottom: 1px solid currentColor;
-  }
-
-  .fun__number {
-    font-family: var(--font);
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--color-accent);
-    letter-spacing: 0.08em;
-  }
-
-  .fun__link {
-    font-family: var(--font);
-    font-size: clamp(1.25rem, 3vw, 1.5rem);
-    text-decoration: none;
-    color: currentColor;
-    transition: color 0.15s ease-in-out;
-  }
-
-  .fun__item:hover {
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-
-  :global(.fun__item:hover .fun__link) {
-    font-style: italic;
-  }
-
-  .fun__link:hover,
-  .fun__link:focus-visible {
-    color: var(--color-accent);
   }
 </style>
