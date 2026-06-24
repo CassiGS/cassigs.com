@@ -12,7 +12,8 @@ date: 2026-05-01T00:00:00Z
 
 ### Watching
 
-- [Andor](https://www.imdb.com/title/tt9253284/) - A show I reccomend to Star Wars fans and non-Star-Wars fans alike. Relevant show for relevant times.
+- Show: [Andor](https://www.imdb.com/title/tt9253284/) - A show I reccomend to Star Wars fans and non-Star-Wars fans alike. Relevant show for relevant times.
+- Finished Show: [Fallout Season 2](https://www.imdb.com/title/tt12637874/) - I have not played this game but my husband has so I knew what I was in for. This show is ridiculous but I like it. Plus this season had more Kyle MacLachlan which I'm here for.
 
 ### Playing
 
