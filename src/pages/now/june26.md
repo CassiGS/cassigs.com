@@ -12,8 +12,9 @@ date: 2026-06-01T00:00:00Z
 
 ### Watching
 
-- Finished: [Andor](https://www.imdb.com/title/tt9253284/)
-- [Running Point](https://www.imdb.com/title/tt14879018/) - my friend introduced me to this one and I'm enjoying it from the pure Parks and Rec/Office cameos alone.
+- Finished Show: [Andor](https://www.imdb.com/title/tt9253284/)
+- Started Show: [Running Point](https://www.imdb.com/title/tt14879018/) - my friend introduced me to this one and I'm enjoying it from the pure Parks and Rec/Office cameos alone.
+- Started Show: [Margo's Got Money Troubles](https://www.imdb.com/title/tt31137273/) - This one is falling a little flat for me despite some incredible acting and a great premise. I'm getting less dark comedy that this one is going for (and I love dark comedy!) and more drama but I might be in the minority there. I might need to try the book. The book is always better! (Though I have to reiterate - incredible acting).
 - Movie: [Backrooms](https://www.imdb.com/title/tt26657236/) - Very visually cool, very weird, made me feel sliiiighly old that they're calling this a new genre of "analogue horror" - but loved it none the less
 - Movie: [I Love Boosters](https://www.imdb.com/title/tt30827810/?ref_=fn_t_1) - Very visually cool, very weird (I'm sensing a theme here) and a wild ride. I loved it.
 - Movie: [Rogue One](https://www.imdb.com/title/tt3748528/) - In particular we watched a fan re-edit of Rogue One that was cut to be like the next three episodes of Andor. It was pretty well done all things considered and it recut a lot of the Andor soundtrack to match it's more moody vibe. It was a real lesson in how the soundtrack can really change things (like all those fan edits cutting trailers into horror movies or into rom coms.)
