@@ -22,6 +22,7 @@ date: 2026-06-01T00:00:00Z
 ### Playing
 
 - Finished: [Caravan SandWitch](https://store.steampowered.com/app/1582650/Caravan_SandWitch/) - Loved this one so much
+- Finished: [Dispatch](https://store.steampowered.com/app/2592160/Dispatch/) - For those who have played I got the "Hollow Victory". But now that I know there are 6 endings I might need another play through.
 - [Dave the Diver](https://store.steampowered.com/app/1868140/DAVE_THE_DIVER/) - this one has been on my to play list for a while, and I'm glad I finally picked it up.
 
 ### Making
