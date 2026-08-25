@@ -10,8 +10,10 @@ date: 2026-07-01T00:00:00Z
 
 - [Silo Season 3](https://www.imdb.com/title/tt14688458/) - I love a good dystopian future show. So glad this one is back
 - [Derry Girls](https://www.imdb.com/title/tt7120662/?ref_=fn_t_1) - This one has been on the list for quite some time, and after watching How to Get to Heaven from Belfast, it seemed only fitting to visit this one next.
+- [Say Nothing](https://www.imdb.com/title/tt31122777/) - The much more serious follow up to Derry Girls.
 - [Disclosure Day](https://www.imdb.com/title/tt15047880/) - Not the best Spielberg movie I've ever seen but love the cast and still very entertaining to watch
 - [Close Encounters of the Third Kind](https://www.imdb.com/title/tt0075860/) - Rented this shortly after watching Disclosure Day, just to get more Spielberg aliens in.
+- [Parks and Rec](https://www.imdb.com/title/tt1266020/) - A classic that warrents a revesit every couple of years or so.
 
 ### Reading
 
@@ -21,6 +23,7 @@ date: 2026-07-01T00:00:00Z
 
 - Continuing: [Dave the Diver](https://store.steampowered.com/app/1868140/DAVE_THE_DIVER/)
 - [Wheel World](https://store.steampowered.com/app/1497460/Wheel_World/) - You get to ride bikes! In a bike only world! And you have a skeleton friend! Just my kind of weird.
+- [Super Mario RPG](https://www.nintendo.com/us/store/products/super-mario-rpg-switch/?srsltid=AfmBOopRyQj7p3XrI8-CRNuUrb2TDhwlQ98DYkeLfotXEVfRb49tL7pj) - One of my favorite games as a kid. I've been meaning to get to the remastered version for a while now and finally did.
 
 ### Making
 
