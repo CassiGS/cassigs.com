@@ -1,40 +1,49 @@
 ---
 import SectionLayout from "../layouts/SectionLayout.astro";
+import Button from "./Button.astro";
 ---
 
-<SectionLayout id="kind-words" pageIndex={4} pageTitle="Kind Words">
-  <div class="kind-words__grid">
-    <figure class="kind-words__card">
-      <blockquote class="kind-words__quote">
-        "Cassi's the reason we were able to do a 4-domain + CMS migration as
-        well as a complete brand overhaul entirely in-house in 1 year, saving
-        Submittable an incredible amount of money and time. She's a strong
-        strategic partner, skilled at translating technical ideas and issues to
-        non-technical marketing teams. Also just a wonderful, fun person to work
-        with."
-      </blockquote>
-      <figcaption class="kind-words__attribution">
-        <span class="kind-words__name">Whitney Rhodes</span>
-        <span class="kind-words__title"
-          >Director of Organic Growth, Submittable</span
-        >
-      </figcaption>
-    </figure>
-    <figure class="kind-words__card">
-      <blockquote class="kind-words__quote">
-        "Cassi was such a great partner to work with, especially where design
-        and development meet. She was always easy to collaborate with, super
-        accommodating, and genuinely focused on finding solutions that worked
-        for both of us. She offered thoughtful feedback on designs and often
-        helped shape ideas in ways that strengthened the final result. Beyond
-        her talent, Cassi is just a fun, outgoing person who brings great energy
-        to every meeting and conversation. Any team would be lucky to have her."
-      </blockquote>
-      <figcaption class="kind-words__attribution">
-        <span class="kind-words__name">Raymond Lombardi</span>
-        <span class="kind-words__title">Art Director, Submittable</span>
-      </figcaption>
-    </figure>
+<SectionLayout id="kind-words" pageIndex={3} pageTitle="Kind Words">
+  <div class="kind-words__wrapper">
+    <div class="kind-words__grid">
+      <figure class="kind-words__card">
+        <blockquote class="kind-words__quote">
+          "Cassi's the reason we were able to do a 4-domain + CMS migration as
+          well as a complete brand overhaul entirely in-house in 1 year, saving
+          Submittable an incredible amount of money and time. She's a strong
+          strategic partner, skilled at translating technical ideas and issues
+          to non-technical marketing teams. Also just a wonderful, fun person to
+          work with."
+        </blockquote>
+        <figcaption class="kind-words__attribution">
+          <span class="kind-words__name">Whitney Rhodes</span>
+          <span class="kind-words__title"
+            >Director of Organic Growth, Submittable</span
+          >
+        </figcaption>
+      </figure>
+      <figure class="kind-words__card">
+        <blockquote class="kind-words__quote">
+          "Cassi was such a great partner to work with, especially where design
+          and development meet. She was always easy to collaborate with, super
+          accommodating, and genuinely focused on finding solutions that worked
+          for both of us. She offered thoughtful feedback on designs and often
+          helped shape ideas in ways that strengthened the final result. Beyond
+          her talent, Cassi is just a fun, outgoing person who brings great
+          energy to every meeting and conversation. Any team would be lucky to
+          have her."
+        </blockquote>
+        <figcaption class="kind-words__attribution">
+          <span class="kind-words__name">Raymond Lombardi</span>
+          <span class="kind-words__title">Art Director, Submittable</span>
+        </figcaption>
+      </figure>
+    </div>
+    <Button
+      link="https://www.linkedin.com/in/cassigs/details/recommendations/"
+      linkText="See All"
+      type="external"
+    />
   </div>
 </SectionLayout>
 
@@ -111,5 +120,12 @@ import SectionLayout from "../layouts/SectionLayout.astro";
     .kind-words__grid {
       grid-template-columns: 1fr;
     }
+  }
+
+  .kind-words__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
   }
 </style>

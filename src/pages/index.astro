@@ -26,10 +26,13 @@ const caseStudies = Object.entries(projectModules).map(([path, mod]) => {
 
 const stats = [
   { label: "Based In", calloutText: "Bellingham, WA" },
-  { label: "Org Specialties", calloutText: "B2B, SaaS, Agency" },
-  { label: "CMS Specialties", calloutText: "Contentful, Headless" },
+  {
+    label: "Org Specialties",
+    calloutText: "B2B, SaaS, Agency, Small Business",
+  },
+  { label: "CMS Specialties", calloutText: "Squarespace, Webflow, Headless" },
+  { label: "Design Stack", calloutText: "Adobe, Figma, Canva" },
   { label: "Tech Stack", calloutText: "React, HTML, CSS, Astro" },
-  { label: "Pages Shipped", calloutText: "1000+" },
   { label: "Years Wrangling the Web", calloutText: "10+" },
   { label: "Office Mate", calloutText: "Sleepy", additionalEl: true },
 ];
@@ -41,28 +44,25 @@ const stats = [
     <div class="about__column-text">
       <div>
         <p>
-          I've worn a lot of hats in my career. As a frontend developer who came
-          up through visual journalism, design, and marketing, I can go beyond
-          technical implementation: I know the types of problems your team is
-          trying to solve.
+          I've worn a lot of hats in my career. As a designer who has explored
+          everything from visual journalism, marketing, and frontend
+          development, I approach design with technical precision and an
+          editorial and marketing eye. Currently I'm working on:
         </p>
 
         <p>
-          <strong>For marketing and communications teams:</strong> I've sat directly
-          on this side of the house. I can take your Figma/design files and help bring
-          them to life: landing pages, specialty pages (e.g., ROI calculators), pricing
-          pages, or whatever else you dream up.
+          <strong>CGS DesignCo.:</strong> Coming soon - a Shopify and Squarespace
+          web shop for small businesses and creative entrepreneurs.
         </p>
         <p>
-          <strong>For agencies:</strong> I plug into existing projects without slowing
-          your team down. I can ramp up on a codebase, work within your process, and
-          interface directly with clients when needed. I can act as an extension of
-          your team, not a dependency.
+          <strong
+            ><a href="https://studio.cassigs.com/">CassiGS Studio</a>:</strong
+          > My illustration studio where I also explore art and creativity.
         </p>
         <p>
-          <strong>For nonprofits and mission-driven organizations:</strong> I understand
-          that storytelling is key, and that your team needs a site that is easy to
-          use. I can help build solutions for non-technical team members to use easily.
+          <strong>General freelance design and development work:</strong> I am also
+          available for general projects. Reach out to see if I'd be a good fit for
+          your project or team!
         </p>
       </div>
       <div class="about__buttons">
@@ -79,7 +79,7 @@ const stats = [
       </div>
     </div>
   </About>
-  <Services />
+  <!-- <Services /> -->
   <CaseStudies caseStudies={caseStudies} />
   <KindWords />
   <div class="home__more-group">

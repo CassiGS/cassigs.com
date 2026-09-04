@@ -104,3 +104,8 @@ main.inner-layout {
 
     }
 }
+
+a,
+a:focus {
+    color: var(--color-accent);
+}
