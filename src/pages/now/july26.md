@@ -1,6 +1,6 @@
 ---
 dateTitle: "July 2026"
-featured: true
+featured: false
 date: 2026-07-01T00:00:00Z
 ---
 

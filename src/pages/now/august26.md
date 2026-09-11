@@ -1,5 +1,5 @@
 ---
-dateTitle: "Agust 2026"
+dateTitle: "August 2026"
 featured: true
 date: 2026-08-01T00:00:00Z
 ---
