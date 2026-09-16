@@ -20,6 +20,10 @@ date: 2026-08-01T00:00:00Z
 
 - [Critial Role: Campaign Two: The Mighty Nein](https://criticalrole.fandom.com/wiki/Campaign_Two:_The_Mighty_Nein) - the cast is so funny to watch live, however I love listening to Critical Role in podcast format. Its like having an audio book that just goes on for a verrry long time. I can't wait for the new show that's coming out.
 
+### Reading
+
+- [Making Art and Making a Living by Mason Currey](https://www.masoncurrey.com/books) - I read Currey's newsletter and I love the way he takes a look at the diversity of creative life in a career that doesn't have the greatest roadmap.
+
 ## What have I been up to
 
 - Went to [Flock Fiber Festival 2026](https://flockfiberfestival.com/), someone described it as ComicCon for fiber folks and I support that destintion. Enjoyed seeing friends in the fiber space and picked up some new goodies for projects
