@@ -10,6 +10,8 @@ date: 2026-08-01T00:00:00Z
 
 - [Silo Season 3](https://www.imdb.com/title/tt14688458/) - Did anyone catch the end of this? Wow. Waiting until next year will be hard
 - [Widow's Bay](https://www.imdb.com/title/tt33332385/) - So many people reccomended this one and they were so right. Also as someone who loves Parks and Rec, having a writer on the show with that style of humor is just _Chefs Kiss_
+- [Parks and Rec](https://www.imdb.com/title/tt1266020/) - It seemed only right that these should go hand-in-hand
+- [Dungeons & Dragons: Honor Among Thieves](https://www.imdb.com/title/tt2906216/) - Introduced this to a friend. It has no business being as good as it is. The fun part for D&D nerds is that it _feels_ like a campaign. Ridiculous antics included.
 
 ### Making
 
@@ -19,6 +21,11 @@ date: 2026-08-01T00:00:00Z
 ### Listening
 
 - [Critial Role: Campaign Two: The Mighty Nein](https://criticalrole.fandom.com/wiki/Campaign_Two:_The_Mighty_Nein) - the cast is so funny to watch live, however I love listening to Critical Role in podcast format. Its like having an audio book that just goes on for a verrry long time. I can't wait for the new show that's coming out.
+
+### Playing
+
+- [Super Mario RPG - Remastered](https://www.nintendo.com/us/store/products/super-mario-rpg-switch/) - Finally got around to this remastered version of my favorite childhood game and it checked all the nostalgia boxes.
+- [South of Midnight](https://store.steampowered.com/app/1934570/South_of_Midnight/) - An absolutly gorgeous game with a great soundtrack. Combat might be a little repetative if that's your thing, and if you don't like traversing games this one's REALLY not for you. But even not it's such a beautiful game it could be worth it anyway.
 
 ### Reading
 
