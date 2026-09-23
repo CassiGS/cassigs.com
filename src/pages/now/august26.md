@@ -12,6 +12,8 @@ date: 2026-08-01T00:00:00Z
 - [Widow's Bay](https://www.imdb.com/title/tt33332385/) - So many people reccomended this one and they were so right. Also as someone who loves Parks and Rec, having a writer on the show with that style of humor is just _Chefs Kiss_
 - [Parks and Rec](https://www.imdb.com/title/tt1266020/) - It seemed only right that these should go hand-in-hand
 - [Dungeons & Dragons: Honor Among Thieves](https://www.imdb.com/title/tt2906216/) - Introduced this to a friend. It has no business being as good as it is. The fun part for D&D nerds is that it _feels_ like a campaign. Ridiculous antics included.
+- [Shang-Chi and the Legend of the Ten Rings](https://www.imdb.com/title/tt9376612/) - Doing a small Marvel rewatch (it's getting _very_ difficult to do a full run) ahead of Doomsday. I'm honestly pretty easy to please when it comes to Marvel movies, but this one is so good.
+- [Doctor Strange in the Multiverse of Madness](https://www.imdb.com/title/tt9419884/) - Gotta catch up on all the Multiverse stuff before the collapse it. Sam Raimi manages to direct a real looney toons of a movie but I don't hate it.
 
 ### Making
 
@@ -34,3 +36,4 @@ date: 2026-08-01T00:00:00Z
 ## What have I been up to
 
 - Went to [Flock Fiber Festival 2026](https://flockfiberfestival.com/), someone described it as ComicCon for fiber folks and I support that destintion. Enjoyed seeing friends in the fiber space and picked up some new goodies for projects
+- Completed 1.5 of my 3 runs at the [Ragnar Trail Run](https://www.crystalmountainresort.com/things-to-do/event-calendar/ragnar-trail-rainier) up in Crystal Mountain this year. Truth be told between being undertrained, a lot of confusion this year due to some internal Ragnar drama, and forgetting I have a slight debilitating fear of heights before I head out on a night run on a mountain, this wasn't my best race by any means. That said had a great time camping with friends and getting some movement in so the weekend wasn't a total bust.
