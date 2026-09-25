@@ -1,6 +1,6 @@
 ---
 dateTitle: "August 2026"
-featured: true
+featured: False
 date: 2026-08-01T00:00:00Z
 ---
 
@@ -15,6 +15,7 @@ date: 2026-08-01T00:00:00Z
 - [Shang-Chi and the Legend of the Ten Rings](https://www.imdb.com/title/tt9376612/) - Doing a small Marvel rewatch (it's getting _very_ difficult to do a full run) ahead of Doomsday. I'm honestly pretty easy to please when it comes to Marvel movies, but this one is so good.
 - [Doctor Strange in the Multiverse of Madness](https://www.imdb.com/title/tt9419884/) - Gotta catch up on all the Multiverse stuff before the collapse it. Sam Raimi manages to direct a real looney toons of a movie but I don't hate it.
 - [Black Widow](https://www.imdb.com/title/tt3480822/) - this movie is very underrated and it introduces Florence Pugh's Yelena which maybe is my favorite Marvel character?
+- [Spider Man Brand New Day](https://www.marvel.com/movies/spider-man-brand-new-day) - I thought this was a good watch. It tackled some themes of isolation well though it never got too deep. Still a good watch in the Marvel lineup!
 - [The Wrong Girls](https://www.imdb.com/title/tt35060353/) - This movie was so weird, and I'm here for it. Though honestly any movie where Kate McKinnon is in it with an accent, no matter how small, I'm here for
 
 ### Making
